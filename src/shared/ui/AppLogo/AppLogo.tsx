@@ -5,10 +5,16 @@ import Logo from '@/shared/assets/icons/logo.svg';
 
 import styles from './AppLogo.module.css';
 
-export const AppLogo: FC = () => {
+type LogoColorType = 'white' | 'black';
+
+interface AppLogoProps {
+	fill?: LogoColorType;
+}
+
+export const AppLogo: FC<AppLogoProps> = ({ fill = 'black' }) => {
 	return (
-		<NavLink to="/" className={styles.logo}>
-			<Logo className={styles.image} />
+		<NavLink to="/" className={styles.link}>
+			<Logo className={`${styles.image} ${styles[fill]}`} />
 		</NavLink>
 	);
 };

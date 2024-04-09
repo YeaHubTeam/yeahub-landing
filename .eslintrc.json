@@ -41,6 +41,7 @@
         "unnamedComponents": "arrow-function"
       }
     ],
+    "react/display-name": 0,
     "@typescript-eslint/no-shadow": 0,
     "import/prefer-default-export": "off",
     "import/extensions": "off",

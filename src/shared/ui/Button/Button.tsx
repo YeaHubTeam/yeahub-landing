@@ -1,12 +1,21 @@
-import React, { FC } from 'react';
+import { ButtonHTMLAttributes, ReactNode, memo } from 'react';
 
-import styles from './Button.module.css';
+import cls from './Button.module.css';
 
-interface ButtonProps {
-	/*Проп children используется для передачи дочерних элементов */
-	children: string;
+export type ButtonType = 'Primary' | 'Secondary' | 'Outline' | 'Tertiary';
+
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+	children?: ReactNode;
+	Btntype?: ButtonType;
+	className?: string;
 }
 
-export const Button: FC<ButtonProps> = ({ children }) => {
-	return <button className={styles.button}>{children}</button>;
-};
+export const Button = memo((props: ButtonProps) => {
+	const { children, Btntype = 'Primary', className = '', ...otherProps } = props;
+
+	return (
+		<button className={`${cls.button} ${cls[Btntype]} ${className}`} {...otherProps}>
+			{children}
+		</button>
+	);
+});
