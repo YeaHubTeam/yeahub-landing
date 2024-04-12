@@ -11,8 +11,8 @@ export const Header = () => {
 			</div>
 
 			<nav className={cls.navigation}>
-				<Button Btntype="Tertiary">Вход</Button>
-				<Button>Регистрация</Button>
+				<Button btnType="tertiary">Вход</Button>
+				<Button btnSize="L">Регистрация</Button>
 			</nav>
 		</header>
 	);

@@ -3,7 +3,9 @@ import { NavLink } from 'react-router-dom';
 
 import Logo from '@/shared/assets/icons/logo.svg';
 
-import styles from './AppLogo.module.css';
+import { classNames } from '../../libs/classNames/classNames';
+
+import cls from './AppLogo.module.css';
 
 type LogoColorType = 'white' | 'black';
 
@@ -13,8 +15,8 @@ interface AppLogoProps {
 
 export const AppLogo: FC<AppLogoProps> = ({ fill = 'black' }) => {
 	return (
-		<NavLink to="/" className={styles.link}>
-			<Logo className={`${styles.image} ${styles[fill]}`} />
+		<NavLink to="/" className={cls.link}>
+			<Logo className={classNames(cls.image, {}, [cls[fill]])} />
 		</NavLink>
 	);
 };

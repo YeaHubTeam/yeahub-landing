@@ -7,7 +7,7 @@
     --color-gray-border: #d1d1d1;
     --color-gray-icon: #757575;
     --color-bottem-border: #e8e8e8;
-    --color-black-text: #474747;
+    --color-black-text: #141414;
     --color-purple-700: #6A0BFF;
     --color-button-bg: rgb(195 157 255 / 100%);
     --color-button-text: rgb(85 9 204 / 100%);
@@ -19,7 +19,7 @@
     --background-active: var(--constant-active);
     --foreground-primary: var(--color-black-text);
     --badge-primary: var(--badge-color);
-    --container-width: 1024px;
+    --container-width: 1216px;
     --container-padding: 0;
     --font-weight-500: 500;
     --font-weight-600: 600;

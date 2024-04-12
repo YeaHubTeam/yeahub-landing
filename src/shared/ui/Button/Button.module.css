@@ -4,9 +4,8 @@
 
 }
 
-.Primary {
-max-width: 150px;
-height: 45px;
+.primary {
+height: 48px;
 width: 100%;
 background: var(--color-purple-700);
 color: var(--constant-white);
@@ -17,9 +16,8 @@ font-size: 18px;
 
 }
 
-.Tertiary {
-    max-width: 100px;
-    height: 45px;
+.tertiary {
+    height: 48px;
     width: 100%;
     border: none;
     background: transparent;
@@ -29,4 +27,14 @@ font-size: 18px;
 }
 
 
+.M {
+    max-width: 100px;
+}
 
+.L {
+    max-width: 150px;
+}
+
+.XL {
+    max-width: 240px;
+}
