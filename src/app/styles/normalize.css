@@ -42,6 +42,10 @@ h1 {
     font-size: 2em;
 }
 
+h2 {
+    margin: 0;
+}
+
 /* Grouping content
    ========================================================================== */
 
@@ -346,4 +350,9 @@ template {
 
 [hidden] {
     display: none;
+}
+
+svg {
+    width: 100%;
+    height: 100%;
 }

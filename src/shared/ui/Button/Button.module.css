@@ -1,24 +1,40 @@
 .button {
-    width: 123px;
-    height: 48px;
-    border: none;
-    border-radius: 40px;
-    background: var(--color-button-bg);
-    color: var(--background-primary);
-    text-align: center;
-    font-weight: var(--font-weight-600);
-    font-size: var(--font-size-medium);
-    font-family: var(--font-family-primary);
-    transition: background-color 0.3s ease;
     cursor: pointer;
+    font-family: var(--font-family-primary);
+
 }
 
-.button:hover {
-    border: 1px solid var(--color-black);
-    background-color: var(--background-primary);
-    color: var(--badge-color);
+.primary {
+height: 48px;
+width: 100%;
+background: var(--color-purple-700);
+color: var(--constant-white);
+border-radius: 58px;
+border: none;
+font-weight: 500;
+font-size: 18px;
+
 }
 
-.button:active {
-    transform: translateY(1px);
+.tertiary {
+    height: 48px;
+    width: 100%;
+    border: none;
+    background: transparent;
+    color: var(--color-purple-700);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+.M {
+    max-width: 100px;
+}
+
+.L {
+    max-width: 150px;
+}
+
+.XL {
+    max-width: 240px;
 }
