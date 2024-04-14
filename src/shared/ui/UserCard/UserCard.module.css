@@ -1,0 +1,66 @@
+    .userCard {
+        padding: 16px;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .userCard p {
+        margin: 0;
+        padding: 0;
+    }
+    
+    
+    .usersName {
+        margin-top: 8px;
+        padding: 0;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    
+    .usersOccupation {
+        margin-top: 4px;
+        font-size: 16px;
+        font-weight: 400;
+    }
+    
+    .userLocation {
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .svgIcon {
+        height: 13px;
+        width: 13px;
+    }
+    
+    .userCard0 {
+        color:  var(--color-white-text);
+    }
+    
+    .userCard1 {
+        color:  var(--color-black-text);
+        background:#F0E7FF;
+    }
+    
+    .userCard2 {
+        color:  var(--color-black-text);
+        background:#ffffff;
+    }
+    
+    .userCard3 {
+        color:  var(--color-black-text);
+        background:#ffffff;
+    }
+    
+    .userCard4 {
+        color:  var(--color-white-text);
+    }
+    
+    .userCard5 {
+        background:#FFFCF2;
+    
+    }
+    
+ 
