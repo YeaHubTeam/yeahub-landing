@@ -1,7 +1,8 @@
 .container {
     width: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .description {
@@ -25,3 +26,36 @@
     line-height: 20px;
     color: var(--color-black-text);
 }
+
+.usersContainer{
+margin-top: 45px;
+width: 100%;
+display: grid;
+gap: 20px;
+grid-template-areas: 
+'block1 block3'
+'block2 block3' 
+;
+grid-template-columns: 1fr 336px;
+grid-template-rows: 194px 194px;
+}
+
+.usersFirstBlock {
+    display: grid;
+    gap: 20px;
+    grid-area: block1;
+grid-template-columns: 332px 244px 244px;
+}
+
+.usersSecondBlock {
+    display: grid;
+    gap: 20px;
+    grid-area: block2;
+grid-template-columns: 244px 332px 244px;
+}
+
+.usersThirdBlock {
+    display: grid;
+    grid-area: block3;
+}
+
