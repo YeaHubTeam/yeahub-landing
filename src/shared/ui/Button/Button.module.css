@@ -1,0 +1,40 @@
+.button {
+    cursor: pointer;
+    font-family: var(--font-family-primary);
+
+}
+
+.primary {
+height: 48px;
+width: 100%;
+background: var(--color-purple-700);
+color: var(--constant-white);
+border-radius: 58px;
+border: none;
+font-weight: 500;
+font-size: 18px;
+
+}
+
+.tertiary {
+    height: 48px;
+    width: 100%;
+    border: none;
+    background: transparent;
+    color: var(--color-purple-700);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+.M {
+    max-width: 100px;
+}
+
+.L {
+    max-width: 150px;
+}
+
+.XL {
+    max-width: 240px;
+}
