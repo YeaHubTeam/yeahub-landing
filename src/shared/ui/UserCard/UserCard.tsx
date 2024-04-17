@@ -2,8 +2,7 @@ import { memo } from 'react';
 
 import MapSVG from '@/shared/assets/icons/map-pin.svg';
 
-import { type MockUsers } from '@/widgets/CommunityBlock';
-
+import { type MockUsers } from '../../const/mockUsers';
 import { classNames } from '../../libs/classNames/classNames';
 import { AvatarFrame } from '../AvatarFrame';
 
