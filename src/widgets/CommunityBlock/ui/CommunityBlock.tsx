@@ -1,7 +1,6 @@
+import { fakeUsers } from '@/shared/const/mockUsers';
 import { Button } from '@/shared/ui/Button';
 import { UserCard } from '@/shared/ui/UserCard';
-
-import { fakeUsers } from '../mockUsers/mockUsers';
 
 import cls from './CommunityBlock.module.css';
 
