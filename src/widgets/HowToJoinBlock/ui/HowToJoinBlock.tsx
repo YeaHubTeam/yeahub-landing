@@ -21,15 +21,21 @@ export const HowToJoinBlock = () => {
 				<div className={cls['arrow-container']}>
 					<ArrowIcon color="#FFDA85" />
 				</div>
-				<img src={step1Img} alt="step" />
+				<div className={cls['img-container']}>
+					<img src={step1Img} alt="step" />
+				</div>
 				<p>
 					Заполните ваш профиль, следуя нашим пошаговым подсказкам и гайдам. Создайте презентацию
 					своих навыков, которая действительно выделяется.
 				</p>
 			</div>
-			<div className={cls.step}>
-				<ArrowIcon color="#6A0BFF" />
-				<img src={step2Img} alt="step" />
+			<div className={cn(cls.step, {}, [cls['second-step']])}>
+				<div className={cls['arrow-container']}>
+					<ArrowIcon color="#6A0BFF" />
+				</div>
+				<div className={cls['img-container']}>
+					<img src={step2Img} alt="step" />
+				</div>
 				<p>
 					Пройдите проверку ваших профессиональных навыков и знаний. Наш бесплатный процесс оценки
 					включает различные этапы — от теоретических знаний до практического тестирования.
