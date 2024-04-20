@@ -7,7 +7,7 @@
     --color-gray-border: #d1d1d1;
     --color-gray-icon: #757575;
     --color-bottem-border: #e8e8e8;
-    --color-white-text: #ffffff;
+    --color-white-text: #fff;
     --color-black-text: #141414;
     --color-purple-700: #6A0BFF;
     --color-button-bg: rgb(195 157 255 / 100%);
@@ -21,12 +21,19 @@
     --foreground-primary: var(--color-black-text);
     --badge-primary: var(--badge-color);
     --container-width: 1216px;
+    --grid-template-columns: 332px 244px 244px;
     --container-padding: 0;
+    --font-weight-400: 400;
     --font-weight-500: 500;
     --font-weight-600: 600;
+    --font-size-very-small: 8px;
+    --font-size-semi-small: 10px;
     --font-size-small: 14px;
     --font-size-medium: 16px;
+    --font-size-semi-large: 18px;
     --font-size-large: 20px;
+    --font-size-small-title: 40px;
+    --font-size-title: 60px;
     --font-family-primary: "Manrope", sans-serif;
 }
 

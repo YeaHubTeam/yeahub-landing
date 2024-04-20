@@ -11,10 +11,10 @@ const user: Array<MockUsers> = fakeUsers.slice(2, 3);
 
 export const PhilosophyBlock = memo(() => {
 	return (
-		<section className={cls.philosophyBlock}>
+		<section className={cls['philosophy-block']}>
 			<h2 className={cls.article}>Наша философия</h2>
 			<div className={cls.container}>
-				<div className={cls.leftBlock}>
+				<div className={cls['left-block']}>
 					<img className={cls.wallpaper} src={philosophyImg} alt="wallpaper" />
 					<UserCard className={cls.user} user={user[0]} />
 					<div className={cls.verification}>
@@ -26,7 +26,7 @@ export const PhilosophyBlock = memo(() => {
 						<Button>Пройти верификацию</Button>
 					</div>
 				</div>
-				<div className={cls.rightBlock}>
+				<div className={cls['right-block']}>
 					<h3>Сообщество специалистов</h3>
 					<span>
 						YeaHub — это не просто платформа, это сообщество верифицированных специалистов, которые

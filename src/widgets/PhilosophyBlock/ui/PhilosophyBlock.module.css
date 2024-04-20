@@ -1,91 +1,91 @@
-.philosophyBlock {
+.philosophy-block {
     margin-bottom: 130px;
 }
 
 .article {
-    text-align: center;
-    font-weight: 500;
-    font-size: 40px;
-    line-height: 50px;
     margin-bottom: 40px;
+    text-align: center;
+    line-height: 50px;
+    font-weight: var(--font-weight-500);
+    font-size: var(--font-size-small-title);
 }
 
 .container {
     display: flex; 
     justify-content: space-between;
-    max-width: 1100px;
     padding: 0 4px;
+    max-width: 1100px;
 }
 
-.leftBlock {
-    max-width: 495px;
-    width: 100%;
+.left-block {
     position: relative;
+    width: 100%;
+    max-width: 495px;
 }
 
 .wallpaper {
-    max-width: 495px;
     width: 100%;
+    max-width: 495px;
 }
 
 .user {
     position: absolute;
     bottom: 40px;
     left: -73px;
-    max-width: 204px;
     width: 100%;
+    max-width: 204px;
 }
 
 .verification {
-    box-sizing: border-box;
     position: absolute;
-    display: flex;
-    flex-direction: column;
-    max-width: 258px;
-    width: 100%;
-    padding: 14px;
     top: 40px;
     right: -73px;
-    background: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 14px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 258px;
     border-radius: 12px;
+    background: #fff;
 }
 
 .verification h3 {
-    font-family: var(--font-family-primary);
-    font-weight: 600;
-    font-size: 14px;
     line-height: 16px;
+    font-weight: var(--font-weight-600);
+    font-size: var(--font-size-small);
+    font-family: var(--font-family-primary);
 }
 
 .verification span {
-    font-family: 400;
-    font-size: 8px;
-    line-height: 12px;
     margin-bottom: 12px;
+    line-height: 12px;
+    font-size: var(--font-size-very-small);
+    font-family: var(--font-weight-400);
 }
 
 .verification button {
+    width: 100%;
     max-width: 136px;
     max-height: 27px;
-    width: 100%;
-    font-size: 10px;
+    font-size: var(--font-size-semi-small);
 }
 
-.rightBlock {
-    max-width: 495px;
+.right-block {
     margin-top: 90px;
     padding: 8px;
+    max-width: 495px;
 }
 
-.rightBlock h3 {
-    font-family: var(--font-family-primary);
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 27px;
+.right-block h3 {
     margin: 16px 0;
+    line-height: 27px;
+    font-weight: var(--font-weight-500);
+    font-size: var(--font-size-large);
+    font-family: var(--font-family-primary);
 }
 
-.rightBlock span {
-    font-weight: 400;
-    font-size: 16px;
+.right-block span {
+    font-weight: var(--font-weight-400);
+    font-size: var(--font-size-medium);
 }
