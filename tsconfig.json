@@ -12,7 +12,8 @@
     "esModuleInterop": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "public": ["./public/*"]
     },
     "plugins": [{ "name": "typescript-plugin-css-modules" }],
     "types": ["node", "jest", "@testing-library/jest-dom"]

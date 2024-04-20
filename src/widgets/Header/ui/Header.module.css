@@ -1,23 +1,23 @@
 .header {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    margin: 16px 0px 60px;
+    align-items: center;
+    margin: 16px 0 60px;
     width: 100%;
 }
 
 .container{
-    max-width: 100px;
     margin: 16px 0 ;
-    height: 32px;
     width: 100%;
+    max-width: 100px;
+    height: 32px;
 }
 
 .navigation {
-    max-width: 276px;
-    width: 100%;
-    margin: 8px 4px;
     display: flex;
     justify-content: space-between;
+    margin: 8px 4px;
+    width: 100%;
+    max-width: 276px;
 }
 

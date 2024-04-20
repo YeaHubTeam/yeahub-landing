@@ -1,4 +1,4 @@
-.avatarFrame {
+.avatar-frame {
     position: relative;
     width: 53px;
     height: 53px;
@@ -6,8 +6,8 @@
 
 .verified {
     position: absolute;
+    top: 2px;
+    right: 2px;
     width: 12px;  
     height: 12px;
-    right: 2px;
-    top: 2px;
 }

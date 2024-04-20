@@ -19,20 +19,20 @@ export const CommunityBlock = () => {
 					YeaHub — это не просто платформа, это место, где профессионалы <br /> IT-индустрии
 					общаются, обмениваются опытом и вдохновляют <br /> друг друга на новые достижения.
 				</p>
-				<Button btnSize="XL">Присоединиться</Button>
+				<Button btnSize="xl">Присоединиться</Button>
 			</div>
-			<div className={cls.usersContainer}>
-				<div className={cls.usersFirstBlock}>
+			<div className={cls['users-container']}>
+				<div className={cls['users-first-block']}>
 					{firstBlock.map((user) => (
 						<UserCard key={user.id} user={user} />
 					))}
 				</div>
-				<div className={cls.usersSecondBlock}>
+				<div className={cls['users-second-block']}>
 					{secondBlock.map((user) => (
 						<UserCard key={user.id} user={user} />
 					))}
 				</div>
-				<div className={cls.usersThirdBlock}>
+				<div className={cls['users-third-block']}>
 					{thirdBlock.map((user) => (
 						<UserCard key={user.id} user={user} />
 					))}
