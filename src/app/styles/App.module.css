@@ -3,7 +3,7 @@
 :root {
     --color-background-gray: #f4f4f4;
     --color-black: #303030;
-    --color-gray-text: #a3a3a3;
+    --color-gray-text: #8C8C8C;
     --color-gray-border: #d1d1d1;
     --color-gray-icon: #757575;
     --color-bottem-border: #e8e8e8;
@@ -31,6 +31,7 @@
     --font-weight-600: 600;
     --font-size-very-small: 8px;
     --font-size-semi-small: 10px;
+    --font-size-medium-small: 12px;
     --font-size-small: 14px;
     --font-size-medium: 16px;
     --font-size-semi-large: 18px;
