@@ -1,5 +1,7 @@
 import { Suspense } from 'react';
 
+import { Footer } from '@/widgets/Footer';
+
 import { MainPage } from '@/pages/MainPage';
 
 import styles from './styles/App.module.css';
@@ -12,6 +14,7 @@ export const App = () => {
 			<div className={styles.container}>
 				<MainPage />
 			</div>
+			<Footer />
 		</Suspense>
 	);
 };

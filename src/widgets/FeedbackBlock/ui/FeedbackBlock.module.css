@@ -1,0 +1,24 @@
+.feedback-block {
+    margin-bottom: 130px;
+}
+
+.title {
+    margin-bottom: 68px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: var(--font-weight-500);
+    font-size: var(--font-size-small-title);
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+}
+
+.container > div:nth-child(even) {
+    background: #fff;
+}
+
+.container > div:nth-child(odd) {
+    background: rgb(240 231 255 / 100%);
+}
