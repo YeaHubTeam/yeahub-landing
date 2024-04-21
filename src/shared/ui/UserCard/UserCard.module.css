@@ -1,66 +1,64 @@
-    .userCard {
-        padding: 16px;
-        border-radius: 8px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
+.user-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px;
+    border-radius: 8px;
+}
 
-    .userCard p {
-        margin: 0;
-        padding: 0;
-    }
-    
-    
-    .usersName {
-        margin-top: 8px;
-        padding: 0;
-        font-size: 16px;
-        font-weight: 600;
-    }
-    
-    .usersOccupation {
-        margin-top: 4px;
-        font-size: 16px;
-        font-weight: 400;
-    }
-    
-    .userLocation {
-        font-size: 14px;
-        font-weight: 400;
-    }
+.user-card p {
+    margin: 0;
+    padding: 0;
+}
 
-    .svgIcon {
-        height: 13px;
-        width: 13px;
-    }
-    
-    .userCard0 {
-        color:  var(--color-white-text);
-    }
-    
-    .userCard1 {
-        color:  var(--color-black-text);
-        background:#F0E7FF;
-    }
-    
-    .userCard2 {
-        color:  var(--color-black-text);
-        background:#ffffff;
-    }
-    
-    .userCard3 {
-        color:  var(--color-black-text);
-        background:#ffffff;
-    }
-    
-    .userCard4 {
-        color:  var(--color-white-text);
-    }
-    
-    .userCard5 {
-        background:#FFFCF2;
-    
-    }
-    
- 
+
+.users-name {
+    margin-top: 8px;
+    padding: 0;
+    font-weight: var(--font-weight-600);
+    font-size: var(--font-size-medium);
+}
+
+.users-occupation {
+    margin-top: 4px;
+    font-weight: var(--font-weight-400);
+    font-size: var(--font-size-medium);
+}
+
+.user-location {
+    font-weight: var(--font-weight-400);
+    font-size: var(--font-size-small);
+}
+
+.svg-icon {
+    width: 13px;
+    height: 13px;
+}
+
+.user-card0 {
+    color:  var(--color-white-text);
+}
+
+.user-card1 {
+    background:#F0E7FF;
+    color:  var(--color-black-text);
+}
+
+.user-card2 {
+    background:#fff;
+    color:  var(--color-black-text);
+}
+
+.user-card3 {
+    background:#fff;
+    color:  var(--color-black-text);
+}
+
+.user-card4 {
+    color:  var(--color-white-text);
+}
+
+.user-card5 {
+    background:#FFFCF2;
+}
+

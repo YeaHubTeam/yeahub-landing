@@ -1,0 +1,25 @@
+.benefits-block {
+    margin-bottom: 130px;
+}
+
+.title {
+    margin: 0;
+    text-align: center;
+    line-height: 50px;
+    font-weight: var(--font-weight-500);
+    font-size: var(--font-size-small-title);
+    font-family: var(--font-family-primary);
+}
+
+.first-block {
+    display: flex;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.second-block {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    margin-top: 20px;
+}

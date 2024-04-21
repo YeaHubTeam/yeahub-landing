@@ -17,17 +17,17 @@ export const UserCard = memo((props: UserCardProps) => {
 	const { user, className } = props;
 	return (
 		<div
-			className={classNames(cls.userCard, {}, [cls['userCard' + user.id], className])}
+			className={classNames(cls['user-card'], {}, [cls['user-card' + user.id], className])}
 			style={{ backgroundImage: user.backGround ? `url(${user.backGround})` : 'none' }}
 		>
 			<div>
 				<AvatarFrame avatar={user.avatar} verified={user.verified} />
-				<p className={cls.usersName}>{user.name}</p>
-				<p className={cls.usersOccupation}>{user.occupation}</p>
+				<p className={cls['users - name']}>{user.name}</p>
+				<p className={cls['users-occupation']}>{user.occupation}</p>
 			</div>
 
-			<p className={cls.userLocation}>
-				<MapSVG className={cls.svgIcon} /> {user.location}
+			<p className={cls['user-location']}>
+				<MapSVG className={cls['svg-icon']} /> {user.location}
 			</p>
 		</div>
 	);

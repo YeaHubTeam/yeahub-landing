@@ -12,7 +12,7 @@ export const Header = () => {
 
 			<nav className={cls.navigation}>
 				<Button btnType="tertiary">Вход</Button>
-				<Button btnSize="L">Регистрация</Button>
+				<Button btnSize="l">Регистрация</Button>
 			</nav>
 		</header>
 	);

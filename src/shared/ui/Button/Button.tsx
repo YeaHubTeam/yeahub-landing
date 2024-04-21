@@ -5,7 +5,7 @@ import { classNames } from '../../libs/classNames/classNames';
 import cls from './Button.module.css';
 
 type ButtonType = 'primary' | 'tertiary';
-type ButtonSize = 'M' | 'L' | 'XL';
+type ButtonSize = 'm' | 'l' | 'xl';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 	children?: ReactNode;
@@ -15,7 +15,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export const Button = memo((props: ButtonProps) => {
-	const { children, btnType = 'primary', className = '', btnSize = 'M', ...otherProps } = props;
+	const { children, btnType = 'primary', className = '', btnSize = 'm', ...otherProps } = props;
 
 	return (
 		<button

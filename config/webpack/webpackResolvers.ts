@@ -7,6 +7,7 @@ export const webpackResolvers = (options: WebpackOptions): Configuration['resolv
     extensions: ['.tsx', '.ts', '.js'],
     alias: {
       '@': options.paths.src,
+      public: options.paths.public,
     },
   };
 };

@@ -1,0 +1,39 @@
+.feedback-card * {
+    margin: 0;
+    padding: 0;
+}
+
+.feedback-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 392px;
+    min-height: 259px;
+    border-radius: 20px;
+}
+
+.feedback-card > p {
+    color: var(--color-black-text);
+    line-height: 20px;
+    font-weight: var(--font-weight-400);
+    font-size: var(--font-size-medium);
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.name {
+    font-weight: var(--font-weight-600);
+    font-size: var(--font-size-medium);
+}
+
+.occupation {
+    font-weight: var(--font-weight-400);
+    font-size: var(--font-size-medium);
+}
