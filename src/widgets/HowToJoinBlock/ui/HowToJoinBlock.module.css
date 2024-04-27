@@ -3,8 +3,7 @@
     align-items: center;
     margin-bottom: 130px;
     min-width: 100%;
-
-    /* overflow: hidden; */
+    overflow-x: hidden;
 }
 
 .how-to-join-block > div:not(:last-child) {

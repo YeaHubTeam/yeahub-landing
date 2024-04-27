@@ -1,14 +1,31 @@
 import step1Img from 'public/assets/HowToJoinBlock/step1.png';
 import step2Img from 'public/assets/HowToJoinBlock/step2.png';
+import { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
 
 import { ArrowIcon } from '@/shared/ArrowIcon';
 import { classNames as cn } from '@/shared/libs/classNames/classNames';
 
+import { wheelHandler } from '../utils/useElementOnScreen';
+
 import cls from './HowToJoinBlock.module.css';
 
 export const HowToJoinBlock = () => {
+	const [ref, inView, entry] = useInView({ threshold: 1.0 });
+
+	useEffect(() => {
+		const element = entry?.target as HTMLElement;
+		if (inView) {
+			element.addEventListener('wheel', wheelHandler);
+		}
+
+		return () => {
+			if (entry?.target) element.removeEventListener('wheel', wheelHandler);
+		};
+	}, [entry?.target, inView]);
+
 	return (
-		<section className={cls['how-to-join-block']}>
+		<section className={cls['how-to-join-block']} ref={ref}>
 			<div className={cls.info}>
 				<h2 className={cls.title}>Как стать частью сообщества</h2>
 				<p className={cls.text}>
