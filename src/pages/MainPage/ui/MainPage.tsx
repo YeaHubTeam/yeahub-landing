@@ -1,4 +1,5 @@
 import { BenefitsBlock } from '@/widgets/BenefitsBlock';
+import { CheckSystemBlock } from '@/widgets/CheckSystemBlock';
 import { CommunityBlock } from '@/widgets/CommunityBlock';
 import { FeedbackBlock } from '@/widgets/FeedbackBlock';
 import { GoalBlock } from '@/widgets/GoalBlock';
@@ -13,7 +14,8 @@ export const MainPage = () => {
 			<CommunityBlock />
 			<PhilosophyBlock />
 			<HowToJoinBlock />
-			<GoalBlock />
+      <GoalBlock />
+			<CheckSystemBlock />
 			<BenefitsBlock />
 			<FeedbackBlock />
 		</>
