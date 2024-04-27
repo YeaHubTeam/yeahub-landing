@@ -1,0 +1,109 @@
+.goal-block {
+    margin-bottom: 130px;
+    padding: 50px 55px;
+    border-radius: 20px;
+    background-color: var(--constant-white);
+    text-align: center;
+}
+
+.title {
+    margin-bottom: 38px;
+    line-height: 50px;
+    text-transform: uppercase;
+    font-weight: var(--font-weight-500);
+    font-size: var(--font-size-small-title);
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 254px;
+}
+
+.verification {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    padding: 15px;
+    box-sizing: border-box;
+    max-width: 217px;
+    border-radius: 12px;
+    background-color: var(--second-step-bg-color);
+    text-align: start;
+    transform: translateY(-104px);
+}
+
+.verification-title {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-weight: var(--font-weight-600);
+    font-size: var(--font-size-small);
+}
+
+.verification-info {
+    margin: 0;
+    margin-bottom: 8px;
+    line-height: normal;
+    font-weight: var(--font-weight-400);
+    font-size: var(--font-size-very-small);
+}
+
+.verification-btn {
+    margin: 0 auto 10px;
+    width: 100%;
+    max-width: 188px;
+    max-height: 29px;
+    font-size: var(--font-size-semi-small);
+}
+
+.verification-link {
+    color: var(--color-purple-700);
+    text-decoration: underline;
+    font-size: var(--font-size-semi-small);
+}
+
+.verification-guide {
+    text-align: start;
+}
+
+.img-wrapper {
+    max-width: 528px;
+}
+
+.right-block {
+    position: relative;
+}
+
+.right-block > p {
+    margin: 0 0 67px;
+    max-width: 234px;
+    text-align: start;
+}
+
+.sticker {
+    padding: 8px 6px;
+    max-width: 190px;
+    border: 0.5px solid var(--color-purple-700);
+    border-radius: 7px;
+    background-color: var(--constant-white);
+    text-align: start;
+    transform: translateX(-75%);
+}
+
+.sticker-title {
+    margin: 0 0 5px;
+    font-weight: var(--font-weight-800);
+    font-size: var(--font-size-semi-small);
+}
+
+.sticker-info {
+    margin: 0;
+    line-height: normal;
+    font-size: var(--font-size-very-small);
+}
