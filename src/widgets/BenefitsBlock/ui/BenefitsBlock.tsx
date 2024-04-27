@@ -1,5 +1,6 @@
 import { memo } from 'react';
 
+import test from '@/shared/assets/images/benefit.png';
 import { mockBenefits } from '@/shared/const/mockBenefits';
 import { BenefitCard } from '@/shared/ui/BenefitCard';
 
@@ -21,6 +22,10 @@ export const BenefitsBlock = memo(() => {
 					))}
 				</div>
 				<div className={cls['second-block']}>
+					<div className={cls.catchphrase}>
+						<img style={{ height: '64px' }} src={test} alt="" />
+						<p>Выбери, каким будет IT завтра, вместе c YeaHub</p>
+					</div>
 					{mockBemefitsSecond.map((benefit) => (
 						<BenefitCard key={benefit.order} mockData={benefit} />
 					))}

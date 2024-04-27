@@ -14,7 +14,10 @@
     --color-button-text: rgb(85 9 204 / 100%);
     --constant-active: rgb(240 231 255 / 100%);
     --badge-color: rgb(64 7 153 / 100%);
+    --main-shadow: 0px 4px 10px rgb(106 99 118 / 10%);
     --constant-white: #fff;
+    --first-step-bg-color: #fffcf2;
+    --second-step-bg-color: #f0e7ff;
     --background-zero: var(--color-background-gray);
     --background-primary: var(--constant-white);
     --background-active: var(--constant-active);
@@ -33,6 +36,7 @@
     --font-size-medium: 16px;
     --font-size-semi-large: 18px;
     --font-size-large: 20px;
+    --font-size-btn-medium:28px;
     --font-size-small-title: 40px;
     --font-size-title: 60px;
     --font-family-primary: "Manrope", sans-serif;

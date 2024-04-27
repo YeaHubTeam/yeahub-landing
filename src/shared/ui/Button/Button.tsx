@@ -4,7 +4,7 @@ import { classNames } from '../../libs/classNames/classNames';
 
 import cls from './Button.module.css';
 
-type ButtonType = 'primary' | 'tertiary';
+type ButtonType = 'primary' | 'tertiary' | 'round';
 type ButtonSize = 'm' | 'l' | 'xl';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {

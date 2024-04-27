@@ -1,24 +1,27 @@
 import { memo } from 'react';
 
-import test from '@/shared/assets/images/mockAvatar1.png';
-
+import { type MockFeedback } from '../../const/mockFeedback';
+import { classNames } from '../../libs/classNames/classNames';
 import { AvatarFrame } from '../AvatarFrame';
 
 import cls from './FeedbackCard.module.css';
 
-export const FeedbackCard = memo(() => {
+interface FeedbackCardProps {
+	user: MockFeedback;
+	className?: string;
+}
+
+export const FeedbackCard = memo((props: FeedbackCardProps) => {
+	const { user, className = '' } = props;
+	const { author, avatar, feedback, occupation } = user;
 	return (
-		<div className={cls['feedback-card']}>
-			<p>
-				«Как начинающий разработчик, я чувствовал себя потерянным в огромном мире программирования.
-				YeaHub помог мне построить чёткий учебный план, и теперь я чувствую себя увереннее и
-				профессионально расту»
-			</p>
+		<div className={classNames(cls['feedback-card'], {}, [className])}>
+			<p>{feedback}</p>
 			<div className={cls.author}>
-				<AvatarFrame avatar={test} />
+				<AvatarFrame avatar={avatar} />
 				<div>
-					<p className={cls.name}>Дмитрий Никольский</p>
-					<p className={cls.occupation}>Backend developer</p>
+					<p className={cls.name}>{author}</p>
+					<p className={cls.occupation}>{occupation}</p>
 				</div>
 			</div>
 		</div>

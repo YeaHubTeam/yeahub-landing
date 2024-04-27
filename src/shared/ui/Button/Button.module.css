@@ -26,6 +26,20 @@
     font-size: var(--font-size-medium);
 }
 
+.round {
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    background: #fff;
+    color: var(--color-purple-700);
+    font-size: var(--font-size-btn-medium);
+}
+
+.round:hover {
+    border: 1px solid #6A0BFF;
+}
+
 
 .m {
     max-width: 100px;

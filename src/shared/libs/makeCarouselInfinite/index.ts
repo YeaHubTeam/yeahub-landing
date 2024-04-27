@@ -1,0 +1,1 @@
+export { makeCarouselInfinite } from './makeCarouselInfinite';
