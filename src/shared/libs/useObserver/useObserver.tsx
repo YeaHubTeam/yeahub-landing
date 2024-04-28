@@ -1,15 +1,15 @@
 import { RefObject, useEffect, useState } from 'react';
 
+const options: IntersectionObserverInit = {
+	root: null,
+	rootMargin: '0px',
+	threshold: 0.5,
+};
+
 export const useObserver = <T extends HTMLElement>(ref: RefObject<T>) => {
 	const [isVisible, setIsVisible] = useState(false);
 
 	useEffect(() => {
-		const options: IntersectionObserverInit = {
-			root: null,
-			rootMargin: '0px',
-			threshold: 0.9,
-		};
-
 		const callback: IntersectionObserverCallback = (entries) => {
 			entries.forEach((entry) => {
 				if (entry.isIntersecting) {

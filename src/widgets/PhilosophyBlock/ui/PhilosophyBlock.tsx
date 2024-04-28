@@ -1,5 +1,3 @@
-import { memo } from 'react';
-
 import philosophyImg from '@/shared/assets/images/philosophyImg.png';
 import { MockUsers, fakeUsers } from '@/shared/const/mockUsers';
 import { Button } from '@/shared/ui/Button';
@@ -9,7 +7,7 @@ import cls from './PhilosophyBlock.module.css';
 
 const user: Array<MockUsers> = fakeUsers.slice(2, 3);
 
-export const PhilosophyBlock = memo(() => {
+export const PhilosophyBlock = () => {
 	return (
 		<section className={cls['philosophy-block']}>
 			<h2 className={cls.article}>Наша философия</h2>
@@ -49,6 +47,6 @@ export const PhilosophyBlock = memo(() => {
 			</div>
 		</section>
 	);
-});
+};
 
 PhilosophyBlock.displayName = 'PhilosophyBlock';

@@ -1,4 +1,4 @@
-import { memo, useEffect, useRef, MouseEvent, useCallback } from 'react';
+import { useRef, MouseEvent, useCallback, useEffect } from 'react';
 
 import { mockFeedback } from '@/shared/const/mockFeedback';
 import { makeCarouselInfinite } from '@/shared/libs/makeCarouselInfinite';
@@ -8,7 +8,7 @@ import { FeedbackCard } from '@/shared/ui/FeedbackCard';
 
 import cls from './FeedbackBlock.module.css';
 
-export const FeedbackBlock = memo(() => {
+export const FeedbackBlock = () => {
 	const sliderRef = useRef<HTMLDivElement>(null);
 	const timeoutIdRef = useRef<NodeJS.Timeout | undefined>();
 	const isVisible: boolean = useObserver(sliderRef);
@@ -36,13 +36,12 @@ export const FeedbackBlock = memo(() => {
 		}, 2500);
 	}, [firstChildWidth, isVisible]);
 
-	autoPlay();
-
 	useEffect(() => {
 		if (isVisible) {
 			autoPlay();
+		} else if (!isVisible) {
+			clearTimeout(timeoutIdRef.current);
 		}
-		return clearInterval(timeoutIdRef.current);
 	}, [autoPlay, isVisible]);
 
 	const handleNextBtn = () => {
@@ -132,6 +131,6 @@ export const FeedbackBlock = memo(() => {
 			</div>
 		</section>
 	);
-});
+};
 
 FeedbackBlock.displayName = 'FeedbackBlock';

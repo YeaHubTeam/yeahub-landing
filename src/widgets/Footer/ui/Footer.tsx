@@ -1,4 +1,3 @@
-import { memo } from 'react';
 import { NavLink } from 'react-router-dom';
 
 import FigmaLogo from '@/shared/assets/icons/figma.svg';
@@ -10,7 +9,7 @@ import { AppLogo } from '@/shared/ui/AppLogo';
 
 import cls from './Footer.module.css';
 
-export const Footer = memo(() => {
+export const Footer = () => {
 	return (
 		<footer className={cls.footer}>
 			<div className={cls.container}>
@@ -54,6 +53,6 @@ export const Footer = memo(() => {
 			</div>
 		</footer>
 	);
-});
+};
 
 Footer.displayName = 'Footer';

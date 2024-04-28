@@ -1,5 +1,3 @@
-import { memo } from 'react';
-
 import test from '@/shared/assets/images/benefit.png';
 import { mockBenefits } from '@/shared/const/mockBenefits';
 import { BenefitCard } from '@/shared/ui/BenefitCard';
@@ -9,7 +7,7 @@ import cls from './BenefitsBlock.module.css';
 const mockBemefitsFirst = mockBenefits.slice(0, 3);
 const mockBemefitsSecond = mockBenefits.slice(3, 6);
 
-export const BenefitsBlock = memo(() => {
+export const BenefitsBlock = () => {
 	return (
 		<section className={cls['benefits-block']}>
 			<h2 className={cls.title}>
@@ -33,6 +31,6 @@ export const BenefitsBlock = memo(() => {
 			</div>
 		</section>
 	);
-});
+};
 
 BenefitsBlock.displayName = 'BenefitsBlock';
