@@ -3,8 +3,8 @@ import step2Img from 'public/assets/HowToJoinBlock/step2.png';
 import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 
-import { ArrowIcon } from '@/shared/ArrowIcon';
 import { classNames as cn } from '@/shared/libs/classNames/classNames';
+import { ArrowIcon } from '@/shared/ui/ArrowIcon';
 
 import { wheelHandler } from '../utils/useElementOnScreen';
 

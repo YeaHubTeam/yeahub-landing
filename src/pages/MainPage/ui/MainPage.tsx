@@ -14,7 +14,7 @@ export const MainPage = () => {
 			<CommunityBlock />
 			<PhilosophyBlock />
 			<HowToJoinBlock />
-      <GoalBlock />
+			<GoalBlock />
 			<CheckSystemBlock />
 			<BenefitsBlock />
 			<FeedbackBlock />
