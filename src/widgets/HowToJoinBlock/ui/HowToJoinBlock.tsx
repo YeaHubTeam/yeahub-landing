@@ -15,6 +15,7 @@ export const HowToJoinBlock = () => {
 	useEffect(() => {
 		const element = entry?.target as HTMLElement;
 		if (inView) {
+			document.body.style.overflowY = 'hidden';
 			element.addEventListener('wheel', wheelHandler);
 		}
 
