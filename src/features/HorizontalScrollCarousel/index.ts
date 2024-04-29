@@ -1,2 +1,1 @@
-import HorizontalScrollCarousel from './ui/HorizontalScrollCarousel';
-export { HorizontalScrollCarousel };
+export { HorizontalScrollCarousel } from './ui/HorizontalScrollCarousel';

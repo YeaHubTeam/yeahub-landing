@@ -7,16 +7,16 @@ interface HorizontalScrollCarousel {
 	children: React.ReactNode;
 }
 
-const HorizontalScrollCarousel = (props: HorizontalScrollCarousel) => {
+export const HorizontalScrollCarousel = (props: HorizontalScrollCarousel) => {
 	const targetRef = useRef(null);
 	const { scrollYProgress } = useScroll({
 		target: targetRef,
 	});
 
-	const x = useTransform(scrollYProgress, [0, 1], ['1%', '-30%']);
+	const x = useTransform(scrollYProgress, [0, 1], ['0%', '-30%']);
 
 	return (
-		<section ref={targetRef} className={cls.contCarousel}>
+		<section ref={targetRef} className={cls.wrapper}>
 			<div className={cls.carousel}>
 				<motion.div style={{ x }} className={cls.inner}>
 					{props.children}
@@ -25,5 +25,3 @@ const HorizontalScrollCarousel = (props: HorizontalScrollCarousel) => {
 		</section>
 	);
 };
-
-export default HorizontalScrollCarousel;

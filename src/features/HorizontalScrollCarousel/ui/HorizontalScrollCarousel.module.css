@@ -1,24 +1,19 @@
 .wrapper {
-display: flex;
-
-}
-.contCarousel {
     position: relative;
-    height: 300vh;
+    height: 200vh; /* чем выше значение, тем дольше будет прокручиваться карусель */
 
 }
 
 .carousel {
     position: sticky;
     top: 0;
-    display: flex;
-    height: 100vh; 
+    display: flex; 
     align-items: center;
+    height: 90vh;
     overflow: hidden;
 
 }
 
 .inner {
-display: flex;
-gap: 20px;
+    display: flex;
 }
