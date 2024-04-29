@@ -7,6 +7,8 @@ import { Header } from '@/widgets/Header';
 import { HowToJoinBlock } from '@/widgets/HowToJoinBlock';
 import { PhilosophyBlock } from '@/widgets/PhilosophyBlock';
 
+// import { Example } from '@/widgets/Horizontal';
+
 export const MainPage = () => {
 	return (
 		<>
@@ -18,6 +20,7 @@ export const MainPage = () => {
 			<CheckSystemBlock />
 			<BenefitsBlock />
 			<FeedbackBlock />
+			{/* <Example /> */}
 		</>
 	);
 };

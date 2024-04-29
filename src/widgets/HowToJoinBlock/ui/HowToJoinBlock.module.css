@@ -1,11 +1,19 @@
 .how-to-join-block {
-    display: flex;
-    align-items: center;
-    margin-bottom: 130px;
+    
     min-width: 100%;
-
+    display: flex;
+    margin-bottom: 130px;
+    align-items: center;
     /* overflow: hidden; */
 }
+
+/* .wrapper {
+    display: flex;
+    margin-bottom: 130px;
+    align-items: center;
+    overflow-x: auto;
+    scrollbar-width: none;
+} */
 
 .how-to-join-block > div:not(:last-child) {
     margin-right: 20px;
