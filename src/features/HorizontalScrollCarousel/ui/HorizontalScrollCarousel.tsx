@@ -16,12 +16,12 @@ export const HorizontalScrollCarousel = (props: HorizontalScrollCarousel) => {
 	const x = useTransform(scrollYProgress, [0, 1], ['0%', '-30%']);
 
 	return (
-		<section ref={targetRef} className={cls.wrapper}>
+		<div ref={targetRef} className={cls.wrapper}>
 			<div className={cls.carousel}>
 				<motion.div style={{ x }} className={cls.inner}>
 					{props.children}
 				</motion.div>
 			</div>
-		</section>
+		</div>
 	);
 };
