@@ -23,3 +23,18 @@
     gap: 20px;
     margin-top: 20px;
 }
+
+.second-block .catchphrase {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.second-block .catchphrase img {
+    max-width: 139px;
+}
+
+.second-block .catchphrase p {
+    font-weight: var(--font-weight-500);
+    font-size: var(--font-size-large);
+}

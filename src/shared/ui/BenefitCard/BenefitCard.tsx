@@ -1,5 +1,3 @@
-import { memo } from 'react';
-
 import { type MockBenefits } from '../../const/mockBenefits';
 
 import cls from './BenefitCard.module.css';
@@ -8,7 +6,7 @@ interface BenefitCardProps {
 	mockData: MockBenefits;
 }
 
-export const BenefitCard = memo((props: BenefitCardProps) => {
+export const BenefitCard = (props: BenefitCardProps) => {
 	const { Icon, backgroundColor, content, numbering, order, title, alt } = props.mockData;
 
 	return (
@@ -61,6 +59,6 @@ export const BenefitCard = memo((props: BenefitCardProps) => {
 			)}
 		</div>
 	);
-});
+};
 
 BenefitCard.displayName = 'BenefitCard';
