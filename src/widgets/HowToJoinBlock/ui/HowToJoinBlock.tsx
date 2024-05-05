@@ -24,7 +24,7 @@ export const HowToJoinBlock = () => {
 							key={data.id}
 							img={data.img}
 							arrowColor={data.arrowColor}
-							bcColor={data.bcColor}
+							bgColor={data.bcColor}
 							text={data.text}
 						/>
 					);
