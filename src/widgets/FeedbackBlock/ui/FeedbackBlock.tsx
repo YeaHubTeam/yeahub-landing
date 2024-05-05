@@ -1,8 +1,8 @@
 import { useRef, MouseEvent, useCallback, useEffect } from 'react';
 
 import { mockFeedback } from '@/shared/const/mockFeedback';
+import { useObserver } from '@/shared/libs/hooks/useObserver';
 import { makeCarouselInfinite } from '@/shared/libs/makeCarouselInfinite';
-import { useObserver } from '@/shared/libs/useObserver';
 import { Button } from '@/shared/ui/Button';
 import { FeedbackCard } from '@/shared/ui/FeedbackCard';
 

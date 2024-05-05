@@ -12,11 +12,7 @@ export const useObserver = <T extends HTMLElement>(ref: RefObject<T>) => {
 	useEffect(() => {
 		const callback: IntersectionObserverCallback = (entries) => {
 			entries.forEach((entry) => {
-				if (entry.isIntersecting) {
-					setIsVisible(true);
-				} else {
-					setIsVisible(false);
-				}
+				setIsVisible(entry.isIntersecting);
 			});
 		};
 
