@@ -1,10 +1,10 @@
 import cls from './ArrowIcon.module.css';
 
-interface props {
+interface ArrowIconProps {
 	color: string;
 }
 
-export const ArrowIcon = ({ color }: props) => {
+export const ArrowIcon = ({ color }: ArrowIconProps) => {
 	return (
 		<div className={cls.container}>
 			<svg

@@ -51,6 +51,7 @@
 }
 
 body {
+    overflow-x: hidden;
     background-color: var(--background-zero);
     color: var(--foreground-primary);
     line-height: 22px;
