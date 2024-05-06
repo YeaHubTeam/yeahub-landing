@@ -10,10 +10,13 @@
     display: flex; 
     align-items: center;
     height: 90vh;
-    overflow: hidden;
-
 }
 
 .inner {
     display: flex;
+    transition: 0.3s linear;
+}
+
+.inner > div:not(:last-child) {
+    margin-right: 20px;
 }
