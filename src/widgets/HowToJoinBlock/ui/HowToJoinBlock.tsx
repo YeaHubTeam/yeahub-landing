@@ -18,16 +18,8 @@ export const HowToJoinBlock = () => {
 						будущее IT уже сегодня.
 					</p>
 				</div>
-				{mockSteps.map((data) => {
-					return (
-						<HowToJoinStep
-							key={data.id}
-							img={data.img}
-							arrowColor={data.arrowColor}
-							bgColor={data.bcColor}
-							text={data.text}
-						/>
-					);
+				{mockSteps.map((step) => {
+					return <HowToJoinStep key={step.id} {...step} />;
 				})}
 			</HorizontalScrollCarousel>
 		</section>
