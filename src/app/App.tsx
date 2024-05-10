@@ -1,8 +1,5 @@
 import { Suspense } from 'react';
-
-import { Footer } from '@/widgets/Footer';
-
-import { MainPage } from '@/pages/MainPage';
+import { Outlet } from 'react-router-dom';
 
 import styles from './styles/App.module.css';
 
@@ -12,9 +9,8 @@ export const App = () => {
 	return (
 		<Suspense fallback="">
 			<div className={styles.container}>
-				<MainPage />
+				<Outlet />
 			</div>
-			<Footer />
 		</Suspense>
 	);
 };

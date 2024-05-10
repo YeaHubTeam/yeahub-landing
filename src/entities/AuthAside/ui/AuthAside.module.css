@@ -1,5 +1,44 @@
 .wrapper {
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-direction: column;
+    justify-content: space-between;
     padding-top: 70px;
-    padding-right: 112px;
+    padding-left: 112px;
+    width: 100%;
     max-width: 42%;
+    height: calc(100vh - 70px);
+    max-height: 860px;
+    background-color: var(--color-purple-700);
+}
+
+.text-color-white {
+    color: var(--constant-white);
+}
+
+.logo-wrapper {
+    margin-bottom: 8px;
+    max-width: 140px;
+}
+
+.logo-wrapper > a > svg {
+    max-height: 45px;
+}
+
+.logo-text {
+    margin: 0;
+    color: var(--constant-white);
+}
+
+h4 {
+    margin-bottom: 14px;
+    color: var(--constant-white);
+    font-size: var(--font-size-24);
+}
+
+.benefit-wrapper {
+    margin: 0;
+    margin-bottom: 70px;
+    padding: 0;
 }
