@@ -6,9 +6,10 @@
     justify-content: space-between;
     padding-top: 70px;
     padding-left: 112px;
+    box-sizing: border-box;
     width: 100%;
-    max-width: 42%;
-    height: calc(100vh - 70px);
+    max-width: 607px;
+    height: 100vh;
     max-height: 860px;
     background-color: var(--color-purple-700);
 }
