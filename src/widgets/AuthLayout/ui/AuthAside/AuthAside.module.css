@@ -1,14 +1,10 @@
 .wrapper {
     display: flex;
-    flex-grow: 1;
-    flex-shrink: 0;
+    flex: 1 0 42%;
     flex-direction: column;
     justify-content: space-between;
-    padding-top: 70px;
-    padding-left: 112px;
+    padding: 70px 40px 0 112px;
     box-sizing: border-box;
-    width: 100%;
-    max-width: 607px;
     height: 100vh;
     background-color: var(--color-purple-700);
 }
