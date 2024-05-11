@@ -1,12 +1,12 @@
 import CheckCircleIcon from '@/shared/assets/icons/check-circle.svg';
 
-import styles from './AuthAsideBenefit.module.css';
+import styles from './BenefitItem.module.css';
 
-type AuthBenefitText = {
+interface BenefitItemProps {
 	text: string;
-};
+}
 
-export const AuthAsideBenefit = ({ text }: AuthBenefitText) => {
+export const BenefitItem = ({ text }: BenefitItemProps) => {
 	return (
 		<li className={styles['text-wrapper']}>
 			<span className={styles['icon-wrapper']}>

@@ -14,7 +14,7 @@ export const Header = () => {
 
 			<nav className={cls.navigation}>
 				<Button btnType="tertiary">
-					<Link to={'/auth'}>Вход</Link>
+					<Link to={'/login'}>Вход</Link>
 				</Button>
 				<Button btnSize="l">Регистрация</Button>
 			</nav>

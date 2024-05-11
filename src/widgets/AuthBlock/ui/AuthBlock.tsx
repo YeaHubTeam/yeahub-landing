@@ -1,7 +1,5 @@
-import { AuthLayout } from '@/shared/ui/AuthLayout';
-
-//import styles from './AuthBlock.module.css'
+import styles from './AuthBlock.module.css';
 
 export const AuthBlock = () => {
-	return <AuthLayout />;
+	return <div className={styles.wrapper}>AuthBlock</div>;
 };

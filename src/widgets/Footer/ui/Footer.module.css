@@ -19,8 +19,12 @@
 .container-logo {
     margin-bottom: 16px;
     width: 100%;
-    max-width: 100px;
+    max-width: 130px;
     height: 32px;
+}
+
+.container-logo a img{
+    padding-right: 5px;
 }
 
 .subtitle {

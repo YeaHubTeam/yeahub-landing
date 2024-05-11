@@ -1,6 +1,6 @@
-import { authAsideData } from '@/shared/const/authAsideData';
 import { AppLogo } from '@/shared/ui/AppLogo';
-import { AuthAsideBenefit } from '@/shared/ui/AuthAsideBenefit';
+
+import { BenefitsList } from '../BenefitsList/BenefitsList';
 
 import styles from './AuthAside.module.css';
 
@@ -13,16 +13,7 @@ export const AuthAside = () => {
 				</div>
 				<p className={styles['logo-text']}>YeaHub объединяет IT-специалистов</p>
 			</div>
-			<div>
-				<h4 className={styles.title}>
-					Стань частью сообщества <br /> YeaHub и получи:
-				</h4>
-				<ul className={styles['benefit-wrapper']}>
-					{authAsideData.map((data) => (
-						<AuthAsideBenefit key={data.text} text={data.text} />
-					))}
-				</ul>
-			</div>
+			<BenefitsList />
 		</aside>
 	);
 };
