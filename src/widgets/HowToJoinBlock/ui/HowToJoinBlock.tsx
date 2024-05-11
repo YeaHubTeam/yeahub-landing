@@ -1,8 +1,6 @@
-import step1Img from 'public/assets/HowToJoinBlock/step1.png';
-import step2Img from 'public/assets/HowToJoinBlock/step2.png';
+import { mockSteps } from '@/shared/const/mockSteps';
 
-import { ArrowIcon } from '@/shared/ArrowIcon';
-import { classNames as cn } from '@/shared/libs/classNames/classNames';
+import { HowToJoinStep } from '@/entities/HowToJoinStep';
 
 import { HorizontalScrollCarousel } from '@/features/HorizontalScrollCarousel';
 
@@ -20,30 +18,9 @@ export const HowToJoinBlock = () => {
 						будущее IT уже сегодня.
 					</p>
 				</div>
-				<div className={cn(cls.step, {}, [cls['first-step']])}>
-					<div className={cls['arrow-container']}>
-						<ArrowIcon color="#FFDA85" />
-					</div>
-					<div className={cls['img-container']}>
-						<img src={step1Img} alt="step" />
-					</div>
-					<p>
-						Заполните ваш профиль, следуя нашим пошаговым подсказкам и гайдам. Создайте презентацию
-						своих навыков, которая действительно выделяется.
-					</p>
-				</div>
-				<div className={cn(cls.step, {}, [cls['second-step']])}>
-					<div className={cls['arrow-container']}>
-						<ArrowIcon color="#6A0BFF" />
-					</div>
-					<div className={cls['img-container']}>
-						<img src={step2Img} alt="step" />
-					</div>
-					<p>
-						Пройдите проверку ваших профессиональных навыков и знаний. Наш бесплатный процесс оценки
-						включает различные этапы — от теоретических знаний до практического тестирования.
-					</p>
-				</div>
+				{mockSteps.map((step) => {
+					return <HowToJoinStep key={step.id} {...step} />;
+				})}
 			</HorizontalScrollCarousel>
 		</section>
 	);

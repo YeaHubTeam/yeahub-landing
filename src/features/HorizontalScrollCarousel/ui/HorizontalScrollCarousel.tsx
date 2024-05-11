@@ -13,7 +13,7 @@ export const HorizontalScrollCarousel = (props: HorizontalScrollCarousel) => {
 		target: targetRef,
 	});
 
-	const x = useTransform(scrollYProgress, [0, 1], ['0%', '-30%']);
+	const x = useTransform(scrollYProgress, [0, 1], ['0%', '-60%']);
 
 	return (
 		<div ref={targetRef} className={cls.wrapper}>

@@ -2,6 +2,7 @@ import { FC } from 'react';
 import { NavLink } from 'react-router-dom';
 
 import Logo from '@/shared/assets/icons/logo.svg';
+import LogoImg from '@/shared/assets/images/logoImg.png';
 
 import { classNames } from '../../libs/classNames/classNames';
 
@@ -15,8 +16,9 @@ interface AppLogoProps {
 
 export const AppLogo: FC<AppLogoProps> = ({ fill = 'black' }) => {
 	return (
-		<NavLink to="/" className={cls.link}>
-			<Logo className={classNames(cls.image, {}, [cls[fill]])} />
+		<NavLink to="/" className={cls.logo}>
+			<img className={cls['logo-image']} src={LogoImg} alt="LogoImg" />
+			<Logo className={classNames(cls.name, {}, [cls[fill]])} />
 		</NavLink>
 	);
 };
