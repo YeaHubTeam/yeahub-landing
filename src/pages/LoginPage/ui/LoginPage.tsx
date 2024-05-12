@@ -1,3 +1,5 @@
+import { LoginCreateForm } from '@/features/authentication/login';
+
 import { AuthBlock } from '@/widgets/AuthBlock';
 import { AuthLayout } from '@/widgets/AuthLayout';
 //import styles from './LoginPage.module.css';
@@ -5,7 +7,9 @@ import { AuthLayout } from '@/widgets/AuthLayout';
 export const LoginPage = () => {
 	return (
 		<AuthLayout>
-			<AuthBlock />
+			<AuthBlock>
+				<LoginCreateForm />
+			</AuthBlock>
 		</AuthLayout>
 	);
 };

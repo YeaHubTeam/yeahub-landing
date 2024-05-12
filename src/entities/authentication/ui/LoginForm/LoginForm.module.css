@@ -1,0 +1,35 @@
+.wrapper {
+    max-width: 408px;
+}
+
+.input-wrapper {
+    position: relative;
+    margin-bottom: 36px;
+}
+
+.label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.input {
+    position: relative;
+    z-index: 1;
+    padding-left: 20px;
+    border-radius: 68px;
+    background-color: var(--background-zero);
+}
+
+.error {
+    position: absolute;
+    color: var(--color-red-600);
+    font-size: var(--font-size-medium-small);
+}
+
+.input > span {
+    z-index: 555 !important;
+}
+
+.input > span:hover {
+    cursor: pointer;;
+}
