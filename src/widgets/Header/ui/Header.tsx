@@ -16,7 +16,9 @@ export const Header = () => {
 				<Button btnType="tertiary">
 					<Link to={'/login'}>Вход</Link>
 				</Button>
-				<Button btnSize="l">Регистрация</Button>
+				<Button btnSize="l">
+					<Link to={'/registration'}>Регистрация</Link>
+				</Button>
 			</nav>
 		</header>
 	);
