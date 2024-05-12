@@ -5,6 +5,7 @@ import { Input, Icon, Button } from 'yeahub-ui-kit';
 
 import { Authentication } from '../../model/types/authentication';
 
+import { AlternativeLogin } from './AlternativeLogin/AlternativeLogin';
 import styles from './LoginForm.module.css';
 
 export const LoginForm = () => {
@@ -63,8 +64,8 @@ export const LoginForm = () => {
 					</div>
 				</div>
 			</div>
-
 			<Button theme="primary" value={'Вход'} className={styles['submit-button']} />
+			<AlternativeLogin />
 		</div>
 	);
 };

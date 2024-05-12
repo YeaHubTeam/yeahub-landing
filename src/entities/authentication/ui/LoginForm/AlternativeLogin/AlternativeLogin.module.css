@@ -1,0 +1,23 @@
+.wrapper {
+    margin-bottom: 76px;
+    text-align: center;
+}
+
+.title {
+    margin-bottom: 9px;
+    font-size: var(--font-size-small);
+}
+
+.icons-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.icon {
+    width: 20px;
+    fill: var(--color-black);
+}
+
+.icon:not(:last-of-type) {
+    margin-right: 20px;
+}
