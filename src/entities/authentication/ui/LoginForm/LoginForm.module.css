@@ -2,8 +2,16 @@
     max-width: 408px;
 }
 
+.form-wrapper {
+    margin-bottom: 40px;
+}
+
 .input-wrapper {
     position: relative;
+
+}
+
+.input-wrapper:not(:last-of-type) {
     margin-bottom: 36px;
 }
 
@@ -14,7 +22,7 @@
 
 .input {
     position: relative;
-    z-index: 1;
+    margin-bottom: 6px;
     padding-left: 20px;
     border-radius: 68px;
     background-color: var(--background-zero);
@@ -22,14 +30,20 @@
 
 .error {
     position: absolute;
+    user-select: none;
     color: var(--color-red-600);
     font-size: var(--font-size-medium-small);
 }
 
-.input > span {
-    z-index: 555 !important;
+.link {
+    display: flex;
+    justify-content: flex-end;
 }
 
 .input > span:hover {
     cursor: pointer;;
+}
+
+.submit-button {
+    width: 100%;
 }
