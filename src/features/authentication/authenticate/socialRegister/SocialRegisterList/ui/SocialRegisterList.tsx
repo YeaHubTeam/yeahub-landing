@@ -1,6 +1,6 @@
 import GitHubIcon from '@/shared/assets/icons/github.svg';
 
-import styles from './SocialRegister.module.css';
+import styles from './SocialRegisterList.module.css';
 
 export const SocialRegister = () => {
 	return (
