@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { Button } from 'yeahub-ui-kit';
 
-import styles from './RegistarationLabel.module.css';
+import styles from './RegistrationLabel.module.css';
 
 export const RegistrationLabel = () => {
 	const navigate = useNavigate();

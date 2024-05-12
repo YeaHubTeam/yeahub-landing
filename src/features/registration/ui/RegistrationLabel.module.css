@@ -4,10 +4,10 @@
     align-items: center;
     padding-right: 16px;
     padding-left: 16px;
-    max-width: 408px;
+    max-width: 443px;
     height: 51px;
     border-radius: 20px;
-    background-color: var(--color-gray-border);
+    background-color: var(--color-label-bg);
     font-weight: var(--font-weight-400);
     font-size: var(--font-size-small);
 }
