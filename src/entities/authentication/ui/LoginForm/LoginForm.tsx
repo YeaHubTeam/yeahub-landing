@@ -4,8 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import { Input, Icon, Button } from 'yeahub-ui-kit';
 
 import { Authentication } from '../../model/types/authentication';
+import { AlternativeLogin } from '../AlternativeLogin/AlternativeLogin';
 
-import { AlternativeLogin } from './AlternativeLogin/AlternativeLogin';
 import styles from './LoginForm.module.css';
 
 export const LoginForm = () => {

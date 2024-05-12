@@ -2,6 +2,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { FormProvider, useForm } from 'react-hook-form';
 
 import { LoginForm } from '@/entities/authentication';
+import { RegistrationLabel } from '@/entities/registration';
 
 import { loginSchema } from '../../model/lib/validation/loginSchema';
 import { LoginSchema } from '../../model/types/loginTypes';
@@ -12,10 +13,11 @@ export const LoginCreateForm = () => {
 		mode: 'onTouched',
 	});
 	return (
-		<FormProvider {...methods}>
-			<div>
+		<>
+			<FormProvider {...methods}>
 				<LoginForm />
-			</div>
-		</FormProvider>
+			</FormProvider>
+			<RegistrationLabel />
+		</>
 	);
 };

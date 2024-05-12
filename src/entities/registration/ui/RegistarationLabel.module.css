@@ -1,0 +1,13 @@
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 16px;
+    padding-left: 16px;
+    max-width: 408px;
+    height: 51px;
+    border-radius: 20px;
+    background-color: var(--color-gray-border);
+    font-weight: var(--font-weight-400);
+    font-size: var(--font-size-small);
+}
