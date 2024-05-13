@@ -1,8 +1,8 @@
 import GitHubIcon from '@/shared/assets/icons/github.svg';
 
-import styles from './SocialRegisterList.module.css';
+import styles from './SocialAuthenticateList.module.css';
 
-export const SocialRegister = () => {
+export const SocialAuthenticateList = () => {
 	return (
 		<div className={styles.wrapper}>
 			<p className={styles.title}>Авторизоваться через социальные сети</p>

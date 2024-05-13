@@ -1,7 +1,7 @@
 import { yupResolver } from '@hookform/resolvers/yup';
 import { FormProvider, useForm } from 'react-hook-form';
 
-import { SocialRegister } from '@/features/authentication/authenticate/socialRegister/SocialRegisterList/ui/SocialRegisterList';
+import { SocialAuthenticateList } from '@/features/authentication/authenticate/socialAuthenticate/SocialAuthenticateList';
 import { LoginForm, RegistrationLabel } from '@/features/authentication/login';
 
 import { loginSchema } from '../../model/lib/validation/loginSchema';
@@ -17,7 +17,7 @@ export const LoginCreateForm = () => {
 			<FormProvider {...methods}>
 				<LoginForm />
 			</FormProvider>
-			<SocialRegister />
+			<SocialAuthenticateList />
 			<RegistrationLabel />
 		</>
 	);
