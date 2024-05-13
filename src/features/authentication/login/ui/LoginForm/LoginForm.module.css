@@ -40,10 +40,6 @@
     justify-content: flex-end;
 }
 
-.input > span:hover {
-    cursor: pointer;;
-}
-
 .submit-button {
     margin-bottom: 20px;
     width: 100%;

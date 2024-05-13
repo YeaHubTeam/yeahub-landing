@@ -38,7 +38,6 @@ export const LoginForm = () => {
 					<label className={styles.label} htmlFor="password">
 						Пароль
 					</label>
-					{/* to do: не работает клик по иконке */}
 					<Input
 						className={styles.input}
 						{...register('password')}
@@ -48,7 +47,9 @@ export const LoginForm = () => {
 							<Icon
 								className={styles.icon}
 								onClick={handleShowPassword}
-								icon={isPasswordHidden ? 'airplane' : 'password'}
+								icon="password"
+								arg={isPasswordHidden}
+								color="--palette-ui-black-300"
 							/>
 						}
 					/>
