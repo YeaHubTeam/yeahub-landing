@@ -17,7 +17,6 @@ export const LoginForm = () => {
 
 	const handleShowPassword = () => {
 		setIsPasswordHidden((prev) => !prev);
-		console.log('click');
 	};
 
 	return (
