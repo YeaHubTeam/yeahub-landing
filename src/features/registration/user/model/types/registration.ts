@@ -3,4 +3,5 @@ export interface Registration {
 	surname: string;
 	phone: string;
 	email: string;
+	isChecked: boolean;
 }

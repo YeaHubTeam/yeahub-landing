@@ -5,4 +5,11 @@ export const userSchema = yup.object().shape({
 	surname: yup.string().trim().min(2).required(),
 	phone: yup.string().min(2).required(),
 	email: yup.string().email().required(),
+	isChecked: yup
+		.boolean()
+		.oneOf(
+			[true],
+			'Для регистрации необходимо согласиться на обработку персональных данных и условия соглашения',
+		)
+		.required(),
 });

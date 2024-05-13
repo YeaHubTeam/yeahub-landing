@@ -1,11 +1,12 @@
 import { useFormContext } from 'react-hook-form';
-import { Button, Input } from 'yeahub-ui-kit';
+import { Button, Checkbox, Input } from 'yeahub-ui-kit';
 
 import { Registration } from '../../model/types/registration';
 
 import styles from './UserForm.module.css';
 
 export const UserForm = () => {
+	//todo доделать чекбокс, валидация yup не работает, скорее всего из-за того, что сам компонент уже изначально обернут в лейбл
 	const {
 		register,
 		formState: { errors },
@@ -52,6 +53,21 @@ export const UserForm = () => {
 				</div>
 			</div>
 			<Button theme="primary" value={'Зарегистрироваться'} className={styles['submit-button']} />
+			<div className={styles['input-wrapper']}>
+				<label className={styles['consent-wrapper']} htmlFor="isChecked">
+					<Checkbox
+						onToggle={(isChecked: boolean) => {
+							console.log(isChecked);
+						}}
+						{...register('isChecked')}
+					/>
+					<p className={styles['consent-text']}>
+						Нажимая «Зарегистрироваться», вы соглашаетесь на обработку персональных данных и условия
+						сервиса
+					</p>
+				</label>
+				{errors.isChecked ? <div className={styles.error}>{errors.isChecked.message}</div> : null}
+			</div>
 		</div>
 	);
 };
