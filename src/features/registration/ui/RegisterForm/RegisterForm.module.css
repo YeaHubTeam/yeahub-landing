@@ -8,10 +8,6 @@
 
 .input-wrapper {
     position: relative;
-
-}
-
-.input-wrapper:not(:last-of-type) {
     margin-bottom: 36px;
 }
 
@@ -35,12 +31,18 @@
     font-size: var(--font-size-medium-small);
 }
 
-.link {
-    display: flex;
-    justify-content: flex-end;
-}
-
 .submit-button {
-    margin-bottom: 20px;
+    margin-bottom: 14px;
     width: 100%;
 }
+
+.consent-wrapper {
+    display: flex;
+}
+
+.consent-text {
+    margin-left: 12px;
+    line-height: normal;
+    font-size: var(--font-size-medium-small);
+}
+

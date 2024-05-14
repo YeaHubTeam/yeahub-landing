@@ -12,7 +12,7 @@ export const RegistrationLabel = () => {
 				tagName="a"
 				theme="link"
 				value={'Зарегистрироваться как специалист'}
-				onClick={() => navigate('/')}
+				onClick={() => navigate('/registration')}
 			/>
 		</div>
 	);
