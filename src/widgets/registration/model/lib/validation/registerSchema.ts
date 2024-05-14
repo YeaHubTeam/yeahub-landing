@@ -1,6 +1,6 @@
 import * as yup from 'yup';
 
-export const userSchema = yup.object().shape({
+export const registerSchema = yup.object().shape({
 	name: yup.string().trim().min(2).required(),
 	surname: yup.string().trim().min(2).required(),
 	phone: yup.string().min(2).required(),

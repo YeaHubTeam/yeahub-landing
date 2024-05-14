@@ -1,5 +1,5 @@
 import { AuthLayout } from '@/widgets/AuthLayout';
-import { UserCreateForm } from '@/widgets/registration/user';
+import { UserCreateForm } from '@/widgets/registration';
 
 import styles from './RegistrationPage.module.css';
 

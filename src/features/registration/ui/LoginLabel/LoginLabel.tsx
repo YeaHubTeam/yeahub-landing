@@ -8,7 +8,7 @@ export const LoginLabel = () => {
 	return (
 		<div className={styles.wrapper}>
 			<p>Уже есть аккаунт?</p>
-			<Button tagName="a" theme="link" value={'Войти'} onClick={() => navigate('/registration')} />
+			<Button tagName="a" theme="link" value={'Войти'} onClick={() => navigate('/login')} />
 		</div>
 	);
 };

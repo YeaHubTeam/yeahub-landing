@@ -1,15 +1,15 @@
 import { yupResolver } from '@hookform/resolvers/yup';
 import { FormProvider, useForm } from 'react-hook-form';
 
-import { SocialRegistrationList } from '@/features/registration/registrate/socialRegistrate/SocialRegistrationList';
-import { LoginLabel, UserForm } from '@/features/registration/user';
+import { SocialAuthenticateList } from '@/features/authentication/socialAuthenticate/SocialAuthenticateList';
+import { LoginLabel, UserForm } from '@/features/registration';
 
-import { userSchema } from '../model/lib/validation/userSchema';
+import { registerSchema } from '../model/lib/validation/registerSchema';
 import { UserSchema } from '../model/types/userTypes';
 
 export const UserCreateForm = () => {
 	const methods = useForm<UserSchema>({
-		resolver: yupResolver(userSchema),
+		resolver: yupResolver(registerSchema),
 		mode: 'onTouched',
 	});
 
@@ -18,7 +18,7 @@ export const UserCreateForm = () => {
 			<FormProvider {...methods}>
 				<UserForm />
 			</FormProvider>
-			<SocialRegistrationList />
+			<SocialAuthenticateList isAuthenticate={false} />
 			<LoginLabel />
 		</>
 	);

@@ -3,7 +3,7 @@ import { Button, Checkbox, Input } from 'yeahub-ui-kit';
 
 import { Registration } from '../../model/types/registration';
 
-import styles from './UserForm.module.css';
+import styles from './RegisterForm.module.css';
 
 export const UserForm = () => {
 	//todo доделать чекбокс, валидация yup не работает, скорее всего из-за того, что сам компонент уже изначально обернут в лейбл
