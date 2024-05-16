@@ -1,15 +1,20 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useFormContext } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { Input, Icon, Button } from 'yeahub-ui-kit';
 
+import { LoginSchema } from '@/widgets/authentication/login/model/types/loginTypes';
+
+import { useLoginMutation } from '../../api/loginApi';
 import { Authentication } from '../../model/types/authentication';
 
 import styles from './LoginForm.module.css';
 
 export const LoginForm = () => {
 	const [isPasswordHidden, setIsPasswordHidden] = useState(false);
+	const [loginMutation, { isSuccess }] = useLoginMutation();
 	const navigate = useNavigate();
+	const { handleSubmit } = useFormContext<LoginSchema>();
 	const {
 		register,
 		formState: { errors },
@@ -18,6 +23,14 @@ export const LoginForm = () => {
 	const handleShowPassword = () => {
 		setIsPasswordHidden((prev) => !prev);
 	};
+
+	const onLogin = async (data: Authentication) => {
+		await loginMutation(data);
+	};
+
+	useEffect(() => {
+		if (isSuccess) navigate('/');
+	}, [isSuccess, navigate]);
 
 	return (
 		<div className={styles.wrapper}>
@@ -28,10 +41,10 @@ export const LoginForm = () => {
 					</label>
 					<Input
 						className={styles.input}
-						{...register('email')}
+						{...register('username')}
 						placeholder="Введите электронную почту"
 					/>
-					{errors.email ? <div className={styles.error}>{errors.email.message}</div> : null}
+					{errors.username ? <div className={styles.error}>{errors.username.message}</div> : null}
 				</div>
 				<div className={styles['input-wrapper']}>
 					<label className={styles.label} htmlFor="password">
@@ -54,16 +67,16 @@ export const LoginForm = () => {
 					/>
 					{errors.password ? <div className={styles.error}>{errors.password.message}</div> : null}
 					<div className={styles.link}>
-						<Button
-							tagName="a"
-							theme="link"
-							value={'Забыли пароль?'}
-							onClick={() => navigate('/')}
-						/>
+						<Button tagName="a" theme="link" value={'Забыли пароль?'} />
 					</div>
 				</div>
 			</div>
-			<Button theme="primary" value={'Вход'} className={styles['submit-button']} />
+			<Button
+				theme="primary"
+				value={'Вход'}
+				className={styles['submit-button']}
+				onClick={handleSubmit(onLogin)}
+			/>
 		</div>
 	);
 };
