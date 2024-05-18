@@ -1,23 +1,48 @@
 import { useState } from 'react';
 import { useFormContext } from 'react-hook-form';
+import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { Input, Icon, Button } from 'yeahub-ui-kit';
 
-import { Authentication } from '../../model/types/authentication';
+import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
+
+import { useLoginMutation } from '../../api/loginApi';
+import { getLoginError } from '../../model/selectors/loginSelectors';
+import { loginPageActions } from '../../model/slices/loginPageSlice';
+import { Login } from '../../model/types/login';
 
 import styles from './LoginForm.module.css';
 
 export const LoginForm = () => {
+	const errorState = useSelector(getLoginError);
+	const dispatch = useAppDispatch();
 	const [isPasswordHidden, setIsPasswordHidden] = useState(false);
+	const [loginMutation, { isLoading }] = useLoginMutation();
 	const navigate = useNavigate();
 	const {
+		handleSubmit,
 		register,
 		formState: { errors },
-	} = useFormContext<Authentication>();
+	} = useFormContext<Login>();
 
 	const handleShowPassword = () => {
 		setIsPasswordHidden((prev) => !prev);
 	};
+
+	const onLogin = async (data: Login) => {
+		await loginMutation(data)
+			.unwrap()
+			.then((response) => {
+				dispatch(loginPageActions.setUserData(response));
+				navigate('/');
+			})
+			.catch((error) => {
+				console.error(error);
+				dispatch(loginPageActions.catchError(error.status));
+			});
+	};
+
+	//todo Поправить ошибку на error.message
 
 	return (
 		<div className={styles.wrapper}>
@@ -28,10 +53,10 @@ export const LoginForm = () => {
 					</label>
 					<Input
 						className={styles.input}
-						{...register('email')}
+						{...register('username')}
 						placeholder="Введите электронную почту"
 					/>
-					{errors.email ? <div className={styles.error}>{errors.email.message}</div> : null}
+					{errors.username ? <div className={styles.error}>{errors.username.message}</div> : null}
 				</div>
 				<div className={styles['input-wrapper']}>
 					<label className={styles.label} htmlFor="password">
@@ -54,16 +79,22 @@ export const LoginForm = () => {
 					/>
 					{errors.password ? <div className={styles.error}>{errors.password.message}</div> : null}
 					<div className={styles.link}>
-						<Button
-							tagName="a"
-							theme="link"
-							value={'Забыли пароль?'}
-							onClick={() => navigate('/')}
-						/>
+						<Button tagName="a" theme="link" value={'Забыли пароль?'} />
 					</div>
 				</div>
 			</div>
-			<Button theme="primary" value={'Вход'} className={styles['submit-button']} />
+			<Button
+				theme="primary"
+				disabled={isLoading}
+				value={'Вход'}
+				className={styles['submit-button']}
+				onClick={handleSubmit(onLogin)}
+			/>
+			{errorState ? (
+				<div className={styles['server-error-message']}>
+					Что-то пошло не так! Статус-код ошибки: {errorState}
+				</div>
+			) : null}
 		</div>
 	);
 };
