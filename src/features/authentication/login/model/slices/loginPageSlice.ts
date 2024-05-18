@@ -4,7 +4,6 @@ import { ResponseData } from '../../api/loginApi';
 
 import { LoginPageSliceTypes } from './types/loginPageSliceTypes';
 
-
 const loginPageSlice = createSlice({
 	name: 'auth',
 	initialState: {
