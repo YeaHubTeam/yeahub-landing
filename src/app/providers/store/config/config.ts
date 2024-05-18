@@ -3,7 +3,7 @@ import { ReducersMapObject, configureStore } from '@reduxjs/toolkit';
 import { baseApi } from '@/shared/config/api/baseApi';
 import { State } from '@/shared/config/store/State';
 
-import { loginPageReducer } from '@/pages/LoginPage';
+import { loginPageReducer } from '@/features/authentication/login';
 
 export const createReduxStore = (initialState?: State) => {
 	const rootReducer: ReducersMapObject<State> = {

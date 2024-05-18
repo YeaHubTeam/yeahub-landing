@@ -1,0 +1,8 @@
+.wrapper {
+    margin-bottom: 20px;
+    color: var(--color-red-600);
+    text-align: center;
+    line-height: normal;
+    font-weight: var(--font-weight-600);
+    font-size: var(--font-size-large);
+}

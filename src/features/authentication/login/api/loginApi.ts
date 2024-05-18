@@ -1,6 +1,6 @@
 import { baseApi } from '@/shared/config/api/baseApi';
 
-import { Authentication } from '../model/types/authentication';
+import { Login } from '../model/types/login';
 
 export interface ResponseData {
 	access_token: string;
@@ -9,7 +9,7 @@ export interface ResponseData {
 
 export const loginApi = baseApi.injectEndpoints({
 	endpoints: (build) => ({
-		login: build.mutation<ResponseData, Authentication>({
+		login: build.mutation<ResponseData, Login>({
 			query: (login) => ({
 				url: 'auth/login',
 				method: 'POST',
