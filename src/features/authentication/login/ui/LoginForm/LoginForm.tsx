@@ -4,21 +4,20 @@ import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { Input, Icon, Button } from 'yeahub-ui-kit';
 
-import { State } from '@/shared/config/store/State';
 import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
-import { ErrorMessageRenderer } from '@/shared/ui/ErrorMessageRenderer/ErrorMessageRenderer';
 
 import { useLoginMutation } from '../../api/loginApi';
+import { getLoginError } from '../../model/selectors/loginSelectors';
 import { loginPageActions } from '../../model/slices/loginPageSlice';
 import { Login } from '../../model/types/login';
 
 import styles from './LoginForm.module.css';
 
 export const LoginForm = () => {
-	const errorState = useSelector((state: State) => state.auth.error);
+	const errorState = useSelector(getLoginError);
 	const dispatch = useAppDispatch();
 	const [isPasswordHidden, setIsPasswordHidden] = useState(false);
-	const [loginMutation] = useLoginMutation();
+	const [loginMutation, { isLoading }] = useLoginMutation();
 	const navigate = useNavigate();
 	const {
 		handleSubmit,
@@ -42,6 +41,8 @@ export const LoginForm = () => {
 				dispatch(loginPageActions.catchError(error.status));
 			});
 	};
+
+	//todo Поправить ошибку на error.message
 
 	return (
 		<div className={styles.wrapper}>
@@ -84,11 +85,16 @@ export const LoginForm = () => {
 			</div>
 			<Button
 				theme="primary"
+				disabled={isLoading}
 				value={'Вход'}
 				className={styles['submit-button']}
 				onClick={handleSubmit(onLogin)}
 			/>
-			{errorState ? <ErrorMessageRenderer props={errorState} /> : null}
+			{errorState ? (
+				<div className={styles['server-error-message']}>
+					Что-то пошло не так! Статус-код ошибки: {errorState}
+				</div>
+			) : null}
 		</div>
 	);
 };
