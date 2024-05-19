@@ -27,7 +27,7 @@ export const UserForm = () => {
 		await loginMutation(data)
 			.unwrap()
 			.then(() => {
-				navigate('/');
+				navigate('/login');
 			})
 			.catch((error) => {
 				console.error(error);
