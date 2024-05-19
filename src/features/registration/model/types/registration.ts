@@ -1,7 +1,8 @@
 export interface Registration {
-	name: string;
-	surname: string;
+	firstName: string;
+	lastName: string;
 	phone: string;
 	email: string;
+	passwordHash: string;
 	isChecked: boolean;
 }
