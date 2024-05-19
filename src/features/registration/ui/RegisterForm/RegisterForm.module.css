@@ -38,6 +38,7 @@
 
 .consent-wrapper {
     display: flex;
+    align-items: center;
 }
 
 .consent-text {
@@ -45,4 +46,36 @@
     line-height: normal;
     font-size: var(--font-size-medium-small);
 }
+
+.consent-wrapper input[type="checkbox"] {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    appearance: none;
+    appearance: none;
+    outline: none;
+    border: 2px solid var(--color-purple-700);
+    border-radius: 4px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.checkbox:checked::before {
+    position: absolute;
+    top: -2px;
+    right: 1px;
+    color: var(--color-white-text);
+    font-size: var(--font-size-semi-large);
+    content: "\2714";
+}
+
+.checkbox:checked {
+    position: relative;
+    background-color: var(--color-purple-700);
+}
+
+.consent-wrapper input[type="checkbox"]:not(:checked):hover {
+    border-color: var(--color-purple-500)
+}
+
 
