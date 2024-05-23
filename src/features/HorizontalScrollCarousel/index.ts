@@ -1,1 +1,2 @@
-export { HorizontalScrollCarousel } from './ui/HorizontalScrollCarousel';
+export { HowToJoinStep } from './ui/HowToJoinStep';
+export { HorizontalScrollCarousel } from './ui/HorizontalScrollCarousel/HorizontalScrollCarousel';
