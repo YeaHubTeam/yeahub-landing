@@ -6,10 +6,10 @@ import { Input, Icon, Button } from 'yeahub-ui-kit';
 
 import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
 
-import { useLoginMutation } from '../../api/loginApi';
-import { getLoginError } from '../../model/selectors/loginSelectors';
-import { loginPageActions } from '../../model/slices/loginPageSlice';
-import { Login } from '../../model/types/login';
+import { useLoginMutation } from '@/entities/authentication';
+import { getLoginError } from '@/entities/authentication';
+import { loginPageActions } from '@/entities/authentication';
+import { Login } from '@/entities/authentication';
 
 import styles from './LoginForm.module.css';
 

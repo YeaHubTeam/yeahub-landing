@@ -1,6 +1,6 @@
 /* eslint-disable @conarti/feature-sliced/layers-slices */
 
-import { LoginPageSliceTypes } from '@/features/authentication/login';
+import { LoginPageSliceTypes } from '@/entities/authentication';
 
 import { baseApi } from '../api/baseApi';
 
