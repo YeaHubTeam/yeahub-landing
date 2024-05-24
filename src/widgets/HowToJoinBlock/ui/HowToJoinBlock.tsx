@@ -1,8 +1,7 @@
 import { mockSteps } from '@/shared/const/mockSteps';
 
-import { HowToJoinStep } from '@/entities/HowToJoinStep';
-
 import { HorizontalScrollCarousel } from '@/features/HorizontalScrollCarousel';
+import { HowToJoinStep } from '@/features/HorizontalScrollCarousel';
 
 import cls from './HowToJoinBlock.module.css';
 
