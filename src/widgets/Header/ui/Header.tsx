@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import { AppLogo } from '@/shared/ui/AppLogo';
 import { Button } from '@/shared/ui/Button';
 
@@ -11,8 +13,12 @@ export const Header = () => {
 			</div>
 
 			<nav className={cls.navigation}>
-				<Button btnType="tertiary">Вход</Button>
-				<Button btnSize="l">Регистрация</Button>
+				<Button btnType="tertiary">
+					<Link to={'/login'}>Вход</Link>
+				</Button>
+				<Button btnSize="l">
+					<Link to={'/registration'}>Регистрация</Link>
+				</Button>
 			</nav>
 		</header>
 	);

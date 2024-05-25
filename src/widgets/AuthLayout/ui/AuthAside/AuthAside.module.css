@@ -1,0 +1,24 @@
+.wrapper {
+    display: flex;
+    flex: 1 0 42%;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 70px 40px 0 112px;
+    box-sizing: border-box;
+    height: 100vh;
+    background-color: var(--color-purple-700);
+}
+
+.logo-wrapper {
+    margin-bottom: 8px;
+    max-width: 136px;
+}
+
+.logo-wrapper > a > svg {
+    max-height: 45px;
+}
+
+.logo-text {
+    margin: 0;
+    color: var(--constant-white);
+}
