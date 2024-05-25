@@ -1,15 +1,15 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-import { ResponseData } from '../../api/loginApi';
+import { ResponseData } from '../../api/authApi';
 
-import { LoginPageSliceTypes } from './types/loginPageSliceTypes';
+import { AuthSliceTypes } from './types/authSliceTypes';
 
-const loginPageSlice = createSlice({
+const authSlice = createSlice({
 	name: 'auth',
 	initialState: {
 		accessToken: localStorage.getItem('accessToken') || '',
 		error: null,
-	} as LoginPageSliceTypes,
+	} as AuthSliceTypes,
 	reducers: {
 		setUserData: (state, action: PayloadAction<ResponseData>) => {
 			const accessToken = action.payload.access_token;
@@ -26,4 +26,4 @@ const loginPageSlice = createSlice({
 	},
 });
 
-export const { reducer: loginPageReducer, actions: loginPageActions } = loginPageSlice;
+export const { reducer: authReducer, actions: authActions } = authSlice;

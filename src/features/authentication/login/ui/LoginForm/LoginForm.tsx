@@ -6,39 +6,39 @@ import { Input, Icon, Button } from 'yeahub-ui-kit';
 
 import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
 
-import { useLoginMutation } from '@/entities/authentication';
-import { getLoginError } from '@/entities/authentication';
-import { loginPageActions } from '@/entities/authentication';
-import { Login } from '@/entities/authentication';
+import { useAuthMutation } from '@/entities/authentication';
+import { getAuthError } from '@/entities/authentication';
+import { authActions } from '@/entities/authentication';
+import { Auth } from '@/entities/authentication';
 
 import styles from './LoginForm.module.css';
 
 export const LoginForm = () => {
-	const errorState = useSelector(getLoginError);
+	const errorState = useSelector(getAuthError);
 	const dispatch = useAppDispatch();
 	const [isPasswordHidden, setIsPasswordHidden] = useState(false);
-	const [loginMutation, { isLoading }] = useLoginMutation();
+	const [loginMutation, { isLoading }] = useAuthMutation();
 	const navigate = useNavigate();
 	const {
 		handleSubmit,
 		register,
 		formState: { errors },
-	} = useFormContext<Login>();
+	} = useFormContext<Auth>();
 
 	const handleShowPassword = () => {
 		setIsPasswordHidden((prev) => !prev);
 	};
 
-	const onLogin = async (data: Login) => {
+	const onLogin = async (data: Auth) => {
 		await loginMutation(data)
 			.unwrap()
 			.then((response) => {
-				dispatch(loginPageActions.setUserData(response));
+				dispatch(authActions.setUserData(response));
 				navigate('/');
 			})
 			.catch((error) => {
 				console.error(error);
-				dispatch(loginPageActions.catchError(error.status));
+				dispatch(authActions.catchError(error.status));
 			});
 	};
 

@@ -1,6 +1,6 @@
-export type { Login } from './model/types/login';
-export type { LoginPageSliceTypes } from './model/slices/types/loginPageSliceTypes';
-export { loginPageActions } from './model/slices/loginPageSlice';
-export { getLoginError } from './model/selectors/loginSelectors';
-export { useLoginMutation } from './api/loginApi';
-export { loginPageReducer } from './model/slices/loginPageSlice';
+export type { Auth } from './model/types/auth';
+export type { AuthSliceTypes } from './model/slices/types/authSliceTypes';
+export { authActions } from './model/slices/authSlice';
+export { getAuthError } from './model/selectors/authSelectors';
+export { useAuthMutation } from './api/authApi';
+export { authReducer } from './model/slices/authSlice';

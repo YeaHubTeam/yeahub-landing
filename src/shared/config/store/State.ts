@@ -1,10 +1,10 @@
 /* eslint-disable @conarti/feature-sliced/layers-slices */
 
-import { LoginPageSliceTypes } from '@/entities/authentication';
+import { AuthSliceTypes } from '@/entities/authentication';
 
 import { baseApi } from '../api/baseApi';
 
 export interface State {
-	auth: LoginPageSliceTypes;
+	auth: AuthSliceTypes;
 	[baseApi.reducerPath]: ReturnType<typeof baseApi.reducer>;
 }

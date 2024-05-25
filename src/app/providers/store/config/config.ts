@@ -3,11 +3,11 @@ import { ReducersMapObject, configureStore } from '@reduxjs/toolkit';
 import { baseApi } from '@/shared/config/api/baseApi';
 import { State } from '@/shared/config/store/State';
 
-import { loginPageReducer } from '@/entities/authentication';
+import { authReducer } from '@/entities/authentication';
 
 export const createReduxStore = (initialState?: State) => {
 	const rootReducer: ReducersMapObject<State> = {
-		auth: loginPageReducer,
+		auth: authReducer,
 		[baseApi.reducerPath]: baseApi.reducer,
 	};
 	return configureStore<State>({
