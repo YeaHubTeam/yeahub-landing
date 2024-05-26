@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { AppLogo } from '@/shared/ui/AppLogo';
 import { Button } from '@/shared/ui/Button';
 
+import { UserProfile } from '@/features/header/UserProfile';
+
 import cls from './Header.module.css';
 
 export const Header = () => {
@@ -20,6 +22,7 @@ export const Header = () => {
 					<Link to={'/registration'}>Регистрация</Link>
 				</Button>
 			</nav>
+			<UserProfile firstName={''} avatarURL={''} />
 		</header>
 	);
 };

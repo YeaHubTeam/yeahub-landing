@@ -4,9 +4,11 @@ import { baseApi } from '@/shared/config/api/baseApi';
 import { State } from '@/shared/config/store/State';
 
 import { authReducer } from '@/entities/authentication';
+import { userReducer } from '@/entities/user';
 
 export const createReduxStore = (initialState?: State) => {
 	const rootReducer: ReducersMapObject<State> = {
+		user: userReducer,
 		auth: authReducer,
 		[baseApi.reducerPath]: baseApi.reducer,
 	};

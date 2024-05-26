@@ -67,3 +67,7 @@ body {
 *:focus-visible {
     outline: 4px solid var(--badge-color);
 }
+
+button, a {
+    cursor: pointer;
+}
