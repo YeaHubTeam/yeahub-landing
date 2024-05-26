@@ -101,9 +101,10 @@ export const UserForm = () => {
 				disabled={isLoading}
 				onClick={handleSubmit(onRegistration)}
 				theme="primary"
-				value={'Зарегистрироваться'}
 				className={styles['submit-button']}
-			/>
+			>
+				Зарегистрироваться
+			</Button>
 			<div className={styles['input-wrapper']}>
 				<label className={styles['consent-wrapper']} htmlFor="isChecked">
 					<input type="checkbox" className={styles.checkbox} {...register('isChecked')} />

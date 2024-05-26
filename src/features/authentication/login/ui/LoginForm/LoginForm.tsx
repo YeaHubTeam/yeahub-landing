@@ -79,17 +79,20 @@ export const LoginForm = () => {
 					/>
 					{errors.password ? <div className={styles.error}>{errors.password.message}</div> : null}
 					<div className={styles.link}>
-						<Button tagName="a" theme="link" value={'Забыли пароль?'} />
+						<Button tagName="a" theme="link">
+							Забыли пароль?
+						</Button>
 					</div>
 				</div>
 			</div>
 			<Button
 				theme="primary"
 				disabled={isLoading}
-				value={'Вход'}
 				className={styles['submit-button']}
 				onClick={handleSubmit(onLogin)}
-			/>
+			>
+				Вход
+			</Button>
 			{errorState ? (
 				<div className={styles['server-error-message']}>
 					Что-то пошло не так! Статус-код ошибки: {errorState}
