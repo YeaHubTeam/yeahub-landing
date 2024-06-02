@@ -11,6 +11,7 @@ import { useAuthMutation } from '@/entities/authentication';
 import { getAuthError } from '@/entities/authentication';
 import { authActions } from '@/entities/authentication';
 import { Auth } from '@/entities/authentication';
+import { userActions } from '@/entities/user';
 
 import styles from './LoginForm.module.css';
 
@@ -35,14 +36,13 @@ export const LoginForm = () => {
 			.unwrap()
 			.then((response) => {
 				dispatch(authActions.setUserData(response));
+				dispatch(userActions.setUserData(response.user));
 				navigate('/');
 			})
 			.catch((error) => {
 				dispatch(authActions.catchError(error.status));
 			});
 	};
-
-	//todo Поправить ошибку на error.message
 
 	return (
 		<div className={styles.wrapper}>

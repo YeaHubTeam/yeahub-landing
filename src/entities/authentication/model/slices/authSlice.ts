@@ -1,7 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-import { setCookie } from '@/shared/libs/cookieHandlers';
-
 import { ResponseData } from '../../api/authApi';
 
 import { AuthSliceTypes } from './types/authSliceTypes';
@@ -17,8 +15,6 @@ const authSlice = createSlice({
 			const accessToken = action.payload.access_token;
 			state.accessToken = accessToken;
 			localStorage.setItem('accessToken', accessToken);
-			const refreshToken = action.payload.refresh_token;
-			setCookie('access_token', `Bearer ${refreshToken}`, 30);
 		},
 		logOut: (state) => {
 			state.accessToken = '';

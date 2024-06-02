@@ -2,6 +2,7 @@
 
 :root {
     --color-background-gray: #f4f4f4;
+    --color-background-gray-2: #f8f8f8;
     --color-black: #303030;
     --color-red-600: #F3164E;
     --color-gray-text: #8C8C8C;
@@ -12,6 +13,7 @@
     --color-black-text: #141414;
     --color-purple-700: #6A0BFF;
     --color-purple-500: #a66dff;
+    --color-purple-800: #5509cc;
     --color-button-bg: rgb(195 157 255 / 100%);
     --color-label-bg: rgb(209 209 209 / 27%);
     --color-button-text: rgb(85 9 204 / 100%);

@@ -1,3 +1,3 @@
 import { State } from '@/shared/config/store/State';
 
-export const getAuthError = (state: State) => state.auth.error;
+export const getUserData = (state: State) => state.user.user;

@@ -8,7 +8,5 @@ export type User = {
 	email: string;
 	birthday: string | null;
 	address: string | null;
-	avatarURL: string | null;
-	createdAt: Date;
-	updatedAt: Date;
+	avatarUrl: string | null;
 };
