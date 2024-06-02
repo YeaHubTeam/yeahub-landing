@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { Input, Icon, Button } from 'yeahub-ui-kit';
 
 import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
+import { errorMessageAdapter } from '@/shared/libs/errorMessageAdapter';
 
 import { useAuthMutation } from '@/entities/authentication';
 import { getAuthError } from '@/entities/authentication';
@@ -37,7 +38,6 @@ export const LoginForm = () => {
 				navigate('/');
 			})
 			.catch((error) => {
-				console.error(error);
 				dispatch(authActions.catchError(error.status));
 			});
 	};
@@ -55,6 +55,7 @@ export const LoginForm = () => {
 						className={styles.input}
 						{...register('username')}
 						placeholder="Введите электронную почту"
+						hasError={!!errors.username?.message}
 					/>
 					{errors.username ? <div className={styles.error}>{errors.username.message}</div> : null}
 				</div>
@@ -67,6 +68,7 @@ export const LoginForm = () => {
 						{...register('password')}
 						placeholder="Введите пароль"
 						type={isPasswordHidden ? 'text' : 'password'}
+						hasError={!!errors.password?.message}
 						suffix={
 							<Icon
 								className={styles.icon}
@@ -94,9 +96,7 @@ export const LoginForm = () => {
 				Вход
 			</Button>
 			{errorState ? (
-				<div className={styles['server-error-message']}>
-					Что-то пошло не так! Статус-код ошибки: {errorState}
-				</div>
+				<div className={styles['server-error-message']}>{errorMessageAdapter(errorState)}</div>
 			) : null}
 		</div>
 	);
