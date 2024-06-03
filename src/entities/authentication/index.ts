@@ -9,3 +9,4 @@ export {
 	useLazyGetRefreshTokenQuery,
 } from './api/authApi';
 export { authReducer } from './model/slices/authSlice';
+export { getAuthData } from './selectors/authSelectors';
