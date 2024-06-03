@@ -3,7 +3,7 @@ import fourthImg from 'public/assets/checkSystem/img/fourth.jpg';
 import secondImg from 'public/assets/checkSystem/img/second.jpg';
 import thirdImg from 'public/assets/checkSystem/img/third.jpg';
 
-import { classNames } from '@/shared/libs/classNames/classNames';
+import { classNames } from '@/shared/libs/utils/classNames/classNames';
 
 import cls from './CheckSystemBlock.module.css';
 export const CheckSystemBlock = () => {

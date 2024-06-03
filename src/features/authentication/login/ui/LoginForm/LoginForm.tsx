@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { Input, Icon, Button } from 'yeahub-ui-kit';
 
 import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
-import { errorMessageAdapter } from '@/shared/libs/errorMessageAdapter';
+import { errorMessageAdapter } from '@/shared/libs/utils/errorMessageAdapter';
 
 import { useAuthMutation } from '@/entities/authentication';
 import { getAuthError } from '@/entities/authentication';

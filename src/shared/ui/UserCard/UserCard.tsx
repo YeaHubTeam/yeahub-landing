@@ -3,7 +3,7 @@ import { memo } from 'react';
 import MapSVG from '@/shared/assets/icons/map-pin.svg';
 
 import { type MockUsers } from '../../const/mockUsers';
-import { classNames } from '../../libs/classNames/classNames';
+import { classNames } from '../../libs/utils/classNames/classNames';
 import { AvatarFrame } from '../AvatarFrame';
 
 import cls from './UserCard.module.css';

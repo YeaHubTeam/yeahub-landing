@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 import verifiedIcon from '@/shared/assets/images/verifiedIcon.png';
 
-import { classNames } from '../../libs/classNames/classNames';
+import { classNames } from '../../libs/utils/classNames/classNames';
 
 import cls from './AvatarFrame.module.css';
 
