@@ -95,10 +95,10 @@ export const UserForm = () => {
 					</label>
 					<Input
 						className={styles.input}
-						{...register('passwordHash')}
+						{...register('password')}
 						placeholder="Введите пароль"
 						type={isPasswordHidden ? 'text' : 'password'}
-						hasError={!!errors.passwordHash?.message}
+						hasError={!!errors.password?.message}
 						suffix={
 							<Icon
 								className={styles.icon}
@@ -109,9 +109,7 @@ export const UserForm = () => {
 							/>
 						}
 					/>
-					{errors.passwordHash ? (
-						<div className={styles.error}>{errors.passwordHash.message}</div>
-					) : null}
+					{errors.password ? <div className={styles.error}>{errors.password.message}</div> : null}
 				</div>
 				<div className={styles['input-wrapper']}>
 					<label className={styles.label} htmlFor="repeatPassword">

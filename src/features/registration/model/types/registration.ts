@@ -3,6 +3,6 @@ export interface Registration {
 	lastName: string;
 	phone: string;
 	email: string;
-	passwordHash: string;
+	password: string;
 	isChecked: boolean;
 }

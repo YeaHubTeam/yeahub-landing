@@ -15,7 +15,7 @@ export const registerSchema = yup.object().shape({
 		.required('поле обязательно для заполнения'),
 	phone: yup.string().min(2).required('поле обязательно для заполнения'),
 	email: yup.string().email('введите корректный email').required('поле обязательно для заполнения'),
-	passwordHash: yup
+	password: yup
 		.string()
 		.min(8, 'пароль должен содержать минимум 8 символов')
 		.required('поле обязательно для заполнения'),
