@@ -7,7 +7,7 @@ import LogoutIcon from '@/shared/assets/icons/logout-icon.svg';
 import ProfileIcon from '@/shared/assets/icons/profile-icon.svg';
 import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
 
-import { useLazyLogoutQuery, userActions } from '@/entities/user';
+import { useLazyLogoutQuery, authActions } from '@/entities/authentication';
 
 import { Avatar } from '../Avatar/Avatar';
 
@@ -29,8 +29,8 @@ export const UserProfile = ({ firstName, avatarURL }: UserProfileProps) => {
 	};
 
 	const onLogout = () => {
-		trigger(null);
-		dispatch(userActions.logOut());
+		trigger();
+		dispatch(authActions.logOut());
 	};
 
 	return (

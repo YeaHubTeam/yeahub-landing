@@ -35,7 +35,7 @@ export const LoginForm = () => {
 		await loginMutation(data)
 			.unwrap()
 			.then((response) => {
-				dispatch(authActions.setUserData(response));
+				dispatch(authActions.setAccessToken(response));
 				dispatch(userActions.setUserData(response.user));
 				navigate('/');
 			})

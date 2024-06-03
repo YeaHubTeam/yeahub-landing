@@ -2,8 +2,11 @@ import { useEffect } from 'react';
 
 import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
 
-import { authActions } from '@/entities/authentication';
-import { useLazyGetRefreshTokenQuery, useUserQuery, userActions } from '@/entities/user';
+import {
+	useLazyGetRefreshTokenQuery,
+	useProfileQuery,
+	authActions,
+} from '@/entities/authentication';
 
 import { BenefitsBlock } from '@/widgets/BenefitsBlock';
 import { CheckSystemBlock } from '@/widgets/CheckSystemBlock';
@@ -18,25 +21,24 @@ import { PhilosophyBlock } from '@/widgets/PhilosophyBlock';
 import styles from './MainPage.module.css';
 
 export const MainPage = () => {
-	const { data: userData, error } = useUserQuery(null);
+	const { data: userData, error } = useProfileQuery();
 	const [trigger] = useLazyGetRefreshTokenQuery();
 	const dispatch = useAppDispatch();
 
 	useEffect(() => {
 		console.log(error);
 		if (error) {
-			trigger(null)
+			trigger()
 				.unwrap()
-				.then((response) => response)
-				.then((data) => {
-					if (data) {
-						dispatch(authActions.setUserData(data));
-						dispatch(userActions.setUserData(data.user));
+				.then((response) => {
+					if (response) {
+						dispatch(authActions.setAccessToken(response));
+						dispatch(authActions.setUserData(response.user));
 					}
 				})
 				.catch((error) => console.log(error));
 		}
-		if (userData) dispatch(userActions.setUserData(userData));
+		if (userData) dispatch(authActions.setUserData(userData));
 	}, [error, userData]);
 
 	return (

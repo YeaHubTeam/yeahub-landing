@@ -1,6 +1,6 @@
-import { baseApi } from '@/shared/config/api/baseApi';
+// import { baseApi } from '@/shared/config/api/baseApi';
 
-import { User } from '../model/types/user';
+// import { User } from '../model/types/user';
 
 export interface ResponseData {
 	access_token: string;
@@ -18,18 +18,18 @@ export interface ResponseData {
 	};
 }
 
-export const userApi = baseApi.injectEndpoints({
-	endpoints: (build) => ({
-		user: build.query<User, null>({
-			query: () => 'auth/profile',
-		}),
-		logout: build.query({
-			query: () => 'auth/logout',
-		}),
-		getRefreshToken: build.query<ResponseData, null>({
-			query: () => 'auth/refresh',
-		}),
-	}),
-});
+// export const userApi = baseApi.injectEndpoints({
+// 	endpoints: (build) => ({
+// 		user: build.query<User, null>({
+// 			query: () => 'auth/profile',
+// 		}),
+// 		logout: build.query({
+// 			query: () => 'auth/logout',
+// 		}),
+// 		getRefreshToken: build.query<ResponseData, null>({
+// 			query: () => 'auth/refresh',
+// 		}),
+// 	}),
+// });
 
-export const { useUserQuery, useLazyLogoutQuery, useLazyGetRefreshTokenQuery } = userApi;
+// export const { useUserQuery, useLazyLogoutQuery, useLazyGetRefreshTokenQuery } = userApi;
