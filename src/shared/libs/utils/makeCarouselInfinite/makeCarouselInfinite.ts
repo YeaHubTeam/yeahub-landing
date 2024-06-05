@@ -1,4 +1,4 @@
-import { type MockFeedback } from '../../const/mockFeedback';
+import { type MockFeedback } from '../../../const/mockFeedback';
 
 export const makeCarouselInfinite = (
 	arr: Array<MockFeedback>,

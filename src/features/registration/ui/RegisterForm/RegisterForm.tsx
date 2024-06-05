@@ -8,23 +8,27 @@ import { Registration } from '../../model/types/registration';
 
 import styles from './RegisterForm.module.css';
 
+interface RegistrationValidation extends Registration {
+	passwordConfirmation: string;
+}
+
 export const UserForm = () => {
 	const [isPasswordHidden, setIsPasswordHidden] = useState(false);
-	const [loginMutation, { isLoading }] = useRegistrationMutation();
+	const [registrationMutation, { isLoading }] = useRegistrationMutation();
 	const navigate = useNavigate();
 
 	const {
 		handleSubmit,
 		register,
 		formState: { errors },
-	} = useFormContext<Registration>();
+	} = useFormContext<RegistrationValidation>();
 
 	const handleShowPassword = () => {
 		setIsPasswordHidden((prev) => !prev);
 	};
 
 	const onRegistration = async (data: Registration) => {
-		await loginMutation(data)
+		await registrationMutation(data)
 			.unwrap()
 			.then(() => {
 				navigate('/login');
@@ -41,14 +45,24 @@ export const UserForm = () => {
 					<label className={styles.label} htmlFor="name">
 						Имя
 					</label>
-					<Input className={styles.input} {...register('firstName')} placeholder="Введите имя" />
+					<Input
+						className={styles.input}
+						{...register('firstName')}
+						placeholder="Введите имя"
+						hasError={!!errors.firstName?.message}
+					/>
 					{errors.firstName ? <div className={styles.error}>{errors.firstName.message}</div> : null}
 				</div>
 				<div className={styles['input-wrapper']}>
 					<label className={styles.label} htmlFor="surname">
 						Фамилия
 					</label>
-					<Input className={styles.input} {...register('lastName')} placeholder="Введите фамилию" />
+					<Input
+						className={styles.input}
+						{...register('lastName')}
+						placeholder="Введите фамилию"
+						hasError={!!errors.lastName?.message}
+					/>
 					{errors.lastName ? <div className={styles.error}>{errors.lastName.message}</div> : null}
 				</div>
 				<div className={styles['input-wrapper']}>
@@ -59,6 +73,7 @@ export const UserForm = () => {
 						className={styles.input}
 						{...register('phone')}
 						placeholder="Введите номер телефона"
+						hasError={!!errors.phone?.message}
 					/>
 					{errors.phone ? <div className={styles.error}>{errors.phone.message}</div> : null}
 				</div>
@@ -70,6 +85,7 @@ export const UserForm = () => {
 						className={styles.input}
 						{...register('email')}
 						placeholder="Введите электронную почту"
+						hasError={!!errors.email?.message}
 					/>
 					{errors.email ? <div className={styles.error}>{errors.email.message}</div> : null}
 				</div>
@@ -79,9 +95,10 @@ export const UserForm = () => {
 					</label>
 					<Input
 						className={styles.input}
-						{...register('passwordHash')}
+						{...register('password')}
 						placeholder="Введите пароль"
 						type={isPasswordHidden ? 'text' : 'password'}
+						hasError={!!errors.password?.message}
 						suffix={
 							<Icon
 								className={styles.icon}
@@ -92,8 +109,30 @@ export const UserForm = () => {
 							/>
 						}
 					/>
-					{errors.passwordHash ? (
-						<div className={styles.error}>{errors.passwordHash.message}</div>
+					{errors.password ? <div className={styles.error}>{errors.password.message}</div> : null}
+				</div>
+				<div className={styles['input-wrapper']}>
+					<label className={styles.label} htmlFor="repeatPassword">
+						Подтвердить пароль
+					</label>
+					<Input
+						className={styles.input}
+						{...register('passwordConfirmation')}
+						placeholder="Введите пароль"
+						type={isPasswordHidden ? 'text' : 'password'}
+						hasError={!!errors.passwordConfirmation?.message}
+						suffix={
+							<Icon
+								className={styles.icon}
+								onClick={handleShowPassword}
+								icon="password"
+								arg={isPasswordHidden}
+								color="--palette-ui-black-300"
+							/>
+						}
+					/>
+					{errors.passwordConfirmation ? (
+						<div className={styles.error}>{errors.passwordConfirmation.message}</div>
 					) : null}
 				</div>
 			</div>
@@ -101,9 +140,10 @@ export const UserForm = () => {
 				disabled={isLoading}
 				onClick={handleSubmit(onRegistration)}
 				theme="primary"
-				value={'Зарегистрироваться'}
 				className={styles['submit-button']}
-			/>
+			>
+				Зарегистрироваться
+			</Button>
 			<div className={styles['input-wrapper']}>
 				<label className={styles['consent-wrapper']} htmlFor="isChecked">
 					<input type="checkbox" className={styles.checkbox} {...register('isChecked')} />

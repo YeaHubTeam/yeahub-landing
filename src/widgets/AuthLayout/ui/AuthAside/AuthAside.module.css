@@ -5,7 +5,7 @@
     justify-content: space-between;
     padding: 70px 40px 0 112px;
     box-sizing: border-box;
-    height: 100vh;
+    min-height: 100vh;
     background-color: var(--color-purple-700);
 }
 

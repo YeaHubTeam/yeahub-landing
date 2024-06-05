@@ -2,9 +2,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom:70px;
     padding-right: 16px;
     padding-left: 16px;
-    max-width: 443px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 408px;
     height: 51px;
     border-radius: 20px;
     background-color: var(--color-label-bg);

@@ -2,14 +2,15 @@
     display: flex;
     flex-basis: 58%;
     flex-direction: column;
-    padding: 180px 0 0 123px;
+    align-items: center;
+    padding-top: 180px;
     box-sizing: border-box;
     width: 100%;
     height: 100vh;
 }
 
 .title {
-    margin-bottom: 75px;
+    margin-bottom: 30px;
     font-weight: var(--font-weight-500);
     font-size: var(--font-size-small-title);
 }

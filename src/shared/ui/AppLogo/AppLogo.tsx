@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import Logo from '@/shared/assets/icons/logo.svg';
 import LogoImg from '@/shared/assets/images/logoImg.png';
 
-import { classNames } from '../../libs/classNames/classNames';
+import { classNames } from '../../libs/utils/classNames/classNames';
 
 import cls from './AppLogo.module.css';
 

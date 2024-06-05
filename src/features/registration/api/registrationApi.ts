@@ -4,7 +4,6 @@ import { Registration } from '../model/types/registration';
 
 export interface ResponseData {
 	access_token: string;
-	refresh_token: string;
 }
 
 export const registrationApi = baseApi.injectEndpoints({

@@ -1,0 +1,11 @@
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 4px;
+    width: 100%;
+    max-width: 276px;
+}
+
+.colored-text a {
+    color: var(--color-white-text)
+}

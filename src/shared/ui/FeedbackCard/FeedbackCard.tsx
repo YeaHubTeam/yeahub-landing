@@ -1,7 +1,7 @@
 import { memo } from 'react';
 
 import { type MockFeedback } from '../../const/mockFeedback';
-import { classNames } from '../../libs/classNames/classNames';
+import { classNames } from '../../libs/utils/classNames/classNames';
 import { AvatarFrame } from '../AvatarFrame';
 
 import cls from './FeedbackCard.module.css';

@@ -5,11 +5,13 @@ import { useNavigate } from 'react-router-dom';
 import { Input, Icon, Button } from 'yeahub-ui-kit';
 
 import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
+import { errorMessageAdapter } from '@/shared/libs/utils/errorMessageAdapter';
 
 import { useAuthMutation } from '@/entities/authentication';
 import { getAuthError } from '@/entities/authentication';
 import { authActions } from '@/entities/authentication';
 import { Auth } from '@/entities/authentication';
+import { userActions } from '@/entities/user';
 
 import styles from './LoginForm.module.css';
 
@@ -33,16 +35,14 @@ export const LoginForm = () => {
 		await loginMutation(data)
 			.unwrap()
 			.then((response) => {
-				dispatch(authActions.setUserData(response));
+				dispatch(authActions.setAccessToken(response));
+				dispatch(userActions.setUserData(response.user));
 				navigate('/');
 			})
 			.catch((error) => {
-				console.error(error);
 				dispatch(authActions.catchError(error.status));
 			});
 	};
-
-	//todo Поправить ошибку на error.message
 
 	return (
 		<div className={styles.wrapper}>
@@ -55,6 +55,7 @@ export const LoginForm = () => {
 						className={styles.input}
 						{...register('username')}
 						placeholder="Введите электронную почту"
+						hasError={!!errors.username?.message}
 					/>
 					{errors.username ? <div className={styles.error}>{errors.username.message}</div> : null}
 				</div>
@@ -67,6 +68,7 @@ export const LoginForm = () => {
 						{...register('password')}
 						placeholder="Введите пароль"
 						type={isPasswordHidden ? 'text' : 'password'}
+						hasError={!!errors.password?.message}
 						suffix={
 							<Icon
 								className={styles.icon}
@@ -79,21 +81,22 @@ export const LoginForm = () => {
 					/>
 					{errors.password ? <div className={styles.error}>{errors.password.message}</div> : null}
 					<div className={styles.link}>
-						<Button tagName="a" theme="link" value={'Забыли пароль?'} />
+						<Button tagName="a" theme="link">
+							Забыли пароль?
+						</Button>
 					</div>
 				</div>
 			</div>
 			<Button
 				theme="primary"
 				disabled={isLoading}
-				value={'Вход'}
 				className={styles['submit-button']}
 				onClick={handleSubmit(onLogin)}
-			/>
+			>
+				Вход
+			</Button>
 			{errorState ? (
-				<div className={styles['server-error-message']}>
-					Что-то пошло не так! Статус-код ошибки: {errorState}
-				</div>
+				<div className={styles['server-error-message']}>{errorMessageAdapter(errorState)}</div>
 			) : null}
 		</div>
 	);
