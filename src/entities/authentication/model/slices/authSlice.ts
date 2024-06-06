@@ -14,6 +14,7 @@ const authSlice = createSlice({
 	reducers: {
 		setUserData: (state, action: PayloadAction<GetProfileResponse>) => {
 			state.user = action.payload;
+			state.error = null;
 		},
 		setAccessToken: (state, action: PayloadAction<GetLoginResponse>) => {
 			const accessToken = action.payload.access_token;

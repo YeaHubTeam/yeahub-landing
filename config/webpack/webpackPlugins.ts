@@ -22,9 +22,7 @@ export const webpackPlugins = ({ isDev, paths }: WebpackOptions): Configuration[
     new DefinePlugin({
       __IS_DEV__: JSON.stringify(isDev),
     }),
-    new Dotenv({
-      path: paths.env,
-    }),
+    new Dotenv(),
   ];
 
   if (isDev) {

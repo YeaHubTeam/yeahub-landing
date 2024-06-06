@@ -1,5 +1,6 @@
 import { baseApi } from '@/shared/config/api/baseApi';
 
+import { authActions } from '../model/slices/authSlice';
 import { Auth } from '../model/types/auth';
 
 export interface GetProfileResponse {
@@ -20,6 +21,16 @@ export interface GetLoginResponse {
 	user: GetProfileResponse;
 }
 
+export interface GetLoginError {
+	error: {
+		status: number;
+		data: {
+			message: string;
+			statusCode: number;
+		};
+	};
+}
+
 export const authApi = baseApi.injectEndpoints({
 	endpoints: (build) => ({
 		auth: build.mutation<GetLoginResponse, Auth>({
@@ -28,6 +39,16 @@ export const authApi = baseApi.injectEndpoints({
 				method: 'POST',
 				body: auth,
 			}),
+			async onQueryStarted(_auth, { dispatch, queryFulfilled }) {
+				try {
+					const result = await queryFulfilled;
+					dispatch(authActions.setUserData(result.data.user));
+					dispatch(authActions.setAccessToken(result.data));
+				} catch (error) {
+					const status = (error as unknown as GetLoginError).error.status;
+					dispatch(authActions.catchError(status));
+				}
+			},
 		}),
 		profile: build.query<GetProfileResponse, void>({
 			query: () => 'auth/profile',
