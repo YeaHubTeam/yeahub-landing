@@ -6,7 +6,7 @@ export const baseApi = createApi({
 	tagTypes: Object.values(ApiTags),
 	reducerPath: 'api',
 	baseQuery: fetchBaseQuery({
-		baseUrl: 'https://api.test.yeahub.ru',
+		baseUrl: process.env.API_URL,
 		credentials: 'include',
 		prepareHeaders: (headers) => {
 			const accessToken = localStorage.getItem('accessToken');
