@@ -1,7 +1,6 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useFormContext } from 'react-hook-form';
 import { useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
 import { Input, Icon, Button } from 'yeahub-ui-kit';
 
 import { errorMessageAdapter } from '@/shared/libs/utils/errorMessageAdapter';
@@ -15,8 +14,7 @@ import styles from './LoginForm.module.css';
 export const LoginForm = () => {
 	const errorState = useSelector(getAuthError);
 	const [isPasswordHidden, setIsPasswordHidden] = useState(false);
-	const [loginMutation, { isLoading, isSuccess }] = useAuthMutation();
-	const navigate = useNavigate();
+	const [loginMutation, { isLoading }] = useAuthMutation();
 	const {
 		handleSubmit,
 		register,
@@ -30,10 +28,6 @@ export const LoginForm = () => {
 	const onLogin = async (data: Auth) => {
 		await loginMutation(data);
 	};
-
-	useEffect(() => {
-		if (isSuccess) navigate(`${process.env.NAVIGATE_AFTER_LOGIN}`);
-	}, [isSuccess, navigate]);
 
 	return (
 		<div className={styles.wrapper}>
