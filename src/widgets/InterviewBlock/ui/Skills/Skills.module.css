@@ -1,0 +1,33 @@
+.container {
+    position: absolute;
+    top:22px;
+    left: -82px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px;
+    width: 152px;
+    height: 144px;
+    border-radius: 12px;
+    background-color: var( --constant-white);
+    transform: rotate(-5deg);
+}
+
+.top-block,
+.bottom-block {
+    display: flex;
+    gap: 8px;
+}
+
+.icon-container {
+    padding: 10px 12px;
+    width: 60px;
+    height: 56px;
+    border-radius: 8px;
+    background-color: var(--color-background-gray);
+}
+
+.icon-container > svg {
+    width: 36px;
+    height: 36px;
+}

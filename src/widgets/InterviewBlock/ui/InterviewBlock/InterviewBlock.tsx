@@ -1,10 +1,11 @@
-import events from '@/shared/assets/images/eventsImg.png';
-import eventsChecked from '@/shared/assets/images/eventsImgChecked.png';
 import interviewImg from '@/shared/assets/images/interviewImg.png';
 import { Button } from '@/shared/ui/Button';
 
-import cls from './InterviewBlock.module.css';
+import { AdvantagesList } from '../AdvantagesList/AdvantagesList';
+import { Progress } from '../Progress/Progress';
+import { Skills } from '../Skills/Skills';
 
+import cls from './InterviewBlock.module.css';
 
 export const InterviewBlock = () => {
 	return (
@@ -24,25 +25,13 @@ export const InterviewBlock = () => {
 					<Button btnSize="xl">Присоединиться</Button>
 				</div>
 				<div className={cls['right-block']}>
+					<Skills />
 					<img className={cls.wallpaper} src={interviewImg} alt="wallpaper" />
+					<Progress />
 				</div>
 			</div>
-			<div className={cls.advantages}>
-				<ul>
-					<li>
-						<img src={events} alt="wallpaper" />
-						<p>Место, где непрерывно учатся и повышают свой профессиональный уровень</p>
-					</li>
-					<li>
-						<img src={eventsChecked} alt="wallpaper" />
-						<p>Становятся частью сообщества, с которым легче достигать самых амбициозных целей</p>
-					</li>
-					<li>
-						<img src={events} alt="wallpaper" />
-						<p>Получают поддержку, делятся опытом и обсуждают всё, что интересует</p>
-					</li>
-				</ul>
-			</div>
+
+			<AdvantagesList />
 		</section>
 	);
 };

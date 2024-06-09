@@ -1,1 +1,1 @@
-export { InterviewBlock } from './ui/InterviewBlock';
+export { InterviewBlock } from './ui/InterviewBlock/InterviewBlock';
