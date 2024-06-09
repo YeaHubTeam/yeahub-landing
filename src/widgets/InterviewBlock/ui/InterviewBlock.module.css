@@ -1,0 +1,133 @@
+.interview-block {
+    margin-bottom: 130px;
+}
+
+.article {
+    margin-bottom: 16px;
+    text-align: left;
+    line-height: 75px;
+    text-transform: uppercase;
+    font-weight: var(--font-weight-500);
+    font-size: var(--font-size-title);
+    text-wrap: nowrap;
+}
+
+.container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 40px;
+}
+
+.left-block {
+    margin-top: 20px;
+    width: 50%;
+}
+
+.left-block > span {
+    margin-bottom: 4px;
+    padding: 6px 12px;
+    border-radius: 37px;
+    background-color: var(--constant-active);
+    color: var(--color-purple-700);
+    line-height: 21.86px;
+    font-size: var(--font-size-medium);
+}
+
+.left-block p {
+    margin-bottom: 24px;
+    line-height: 21.86px;
+}
+
+.wallpaper {
+    width: 100%;
+}
+
+.right-block {
+    position: relative;
+    margin-top: -28px;
+    width: 498px;
+}
+
+.right-block::before {
+    position: absolute;
+    top: 22.2px;
+    left: -81.87px;
+    width: 164px;
+    height: 156px;
+    background: url("/src/shared/assets/images/interviewbannerfigma.png");
+    content: "";
+}
+
+.right-block::after {
+    position: absolute;
+    right: -66px;
+    bottom: 218px;
+    width: 186px;
+    height: 81px;
+    background: url("/src/shared/assets/images/progressimg.png");
+    content: "";
+}
+
+.advantages {
+    margin-top: 100px;
+}
+
+.advantages ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+    gap: 20px;
+    height: 263px;
+    list-style: none;
+}
+
+.advantages li {
+    position: relative;
+    padding: 24px;
+    height: 201px;
+    border-radius: 12px;
+    background-color: var(--color-white-text);
+}
+
+.advantages li:nth-child(2) {
+    align-self: end;
+    height: 223px;
+    background-color: var(--constant-active);
+}
+
+.advantages li:nth-child(2)::before {
+    position: absolute;
+    bottom: 223px;
+    left: 167px;
+    width: 69px;
+    height: 265px;
+    border-top: 2px solid #D2B6FF;
+    border-left: 2px solid #D2B6FF;
+    border-top-left-radius: 20px;
+    content: "";
+}
+
+.advantages li:nth-child(3)::before {
+    position: absolute;
+    right: 51px;
+    bottom: 201px;
+    width: 19px;
+    height: 146px;
+    border-top: 2px solid #D2B6FF;
+    border-right: 2px solid #D2B6FF;
+    border-top-right-radius: 20px;
+    content: "";
+}
+
+.advantages img {
+    margin-bottom: 64px;
+    width: 43px;
+    height: 45px;
+}
+
+.advantages p {
+    line-height: 21.86px;
+    font-weight: var(--font-weight-400);
+    font-size: var(--font-size-medium);
+}
