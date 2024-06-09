@@ -1,26 +1,20 @@
 import { useState } from 'react';
 import { useFormContext } from 'react-hook-form';
 import { useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
 import { Input, Icon, Button } from 'yeahub-ui-kit';
 
-import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
 import { errorMessageAdapter } from '@/shared/libs/utils/errorMessageAdapter';
 
 import { useAuthMutation } from '@/entities/authentication';
 import { getAuthError } from '@/entities/authentication';
-import { authActions } from '@/entities/authentication';
 import { Auth } from '@/entities/authentication';
-import { userActions } from '@/entities/user';
 
 import styles from './LoginForm.module.css';
 
 export const LoginForm = () => {
 	const errorState = useSelector(getAuthError);
-	const dispatch = useAppDispatch();
 	const [isPasswordHidden, setIsPasswordHidden] = useState(false);
 	const [loginMutation, { isLoading }] = useAuthMutation();
-	const navigate = useNavigate();
 	const {
 		handleSubmit,
 		register,
@@ -32,16 +26,7 @@ export const LoginForm = () => {
 	};
 
 	const onLogin = async (data: Auth) => {
-		await loginMutation(data)
-			.unwrap()
-			.then((response) => {
-				dispatch(authActions.setAccessToken(response));
-				dispatch(userActions.setUserData(response.user));
-				navigate('/');
-			})
-			.catch((error) => {
-				dispatch(authActions.catchError(error.status));
-			});
+		await loginMutation(data);
 	};
 
 	return (

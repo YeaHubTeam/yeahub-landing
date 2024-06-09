@@ -2,7 +2,10 @@ import path from 'path';
 
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 import CircularDependencyPlugin from 'circular-dependency-plugin';
+import CopyPlugin from 'copy-webpack-plugin';
+import Dotenv from 'dotenv-webpack';
 import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
+import HtmlInlineScriptPlugin from 'html-inline-script-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { Configuration, DefinePlugin, ProgressPlugin } from 'webpack';
@@ -19,6 +22,7 @@ export const webpackPlugins = ({ isDev, paths }: WebpackOptions): Configuration[
     new DefinePlugin({
       __IS_DEV__: JSON.stringify(isDev),
     }),
+    new Dotenv(),
   ];
 
   if (isDev) {
@@ -30,6 +34,7 @@ export const webpackPlugins = ({ isDev, paths }: WebpackOptions): Configuration[
         failOnError: true,
       }),
     );
+    plugins.push(new BundleAnalyzerPlugin());
   } else {
     plugins.push(
       new MiniCssExtractPlugin({
@@ -37,7 +42,17 @@ export const webpackPlugins = ({ isDev, paths }: WebpackOptions): Configuration[
         chunkFilename: 'css/[name].[contenthash:8].css',
       }),
     );
+    plugins.push(
+      new HtmlInlineScriptPlugin({
+        scriptMatchPattern: [/initColorScheme\..+\.js$/],
+      }),
+    );
     plugins.push(new BundleAnalyzerPlugin());
+    plugins.push(
+      new CopyPlugin({
+        patterns: [{ from: paths.locales, to: paths.buildLocales }],
+      }),
+    );
   }
 
   return plugins;

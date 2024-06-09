@@ -6,6 +6,8 @@ import { State } from '@/shared/config/store/State';
 import { authReducer } from '@/entities/authentication';
 import { userReducer } from '@/entities/user';
 
+import { router } from '../../router';
+
 export const createReduxStore = (initialState?: State) => {
 	const rootReducer: ReducersMapObject<State> = {
 		user: userReducer,
@@ -18,6 +20,13 @@ export const createReduxStore = (initialState?: State) => {
 		preloadedState: initialState,
 		// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 		// @ts-ignore
-		middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(baseApi.middleware),
+		middleware: (getDefaultMiddleware) =>
+			getDefaultMiddleware({
+				thunk: {
+					extraArgument: {
+						navigate: router.navigate,
+					},
+				},
+			}).concat(baseApi.middleware),
 	});
 };
