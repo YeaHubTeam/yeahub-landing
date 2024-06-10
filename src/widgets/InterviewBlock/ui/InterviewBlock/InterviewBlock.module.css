@@ -1,0 +1,50 @@
+.interview-block {
+    margin-bottom: 130px;
+}
+
+.article {
+    margin-bottom: 16px;
+    text-align: left;
+    line-height: 75px;
+    text-transform: uppercase;
+    font-weight: var(--font-weight-500);
+    font-size: var(--font-size-title);
+    text-wrap: nowrap;
+}
+
+.container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 40px;
+}
+
+.left-block {
+    margin-top: 20px;
+    width: 50%;
+}
+
+.left-block > span {
+    margin-bottom: 4px;
+    padding: 6px 12px;
+    border-radius: 37px;
+    background-color: var(--constant-active);
+    color: var(--color-purple-700);
+    line-height: 21.86px;
+    font-size: var(--font-size-medium);
+}
+
+.left-block p {
+    margin-bottom: 24px;
+    line-height: 21.86px;
+}
+
+.wallpaper {
+    width: 100%;
+}
+
+.right-block {
+    position: relative;
+    margin-top: -28px;
+    width: 498px;
+}
