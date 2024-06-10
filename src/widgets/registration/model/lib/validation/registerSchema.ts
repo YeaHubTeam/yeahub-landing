@@ -21,7 +21,7 @@ export const registerSchema = yup.object().shape({
 		.required('Поле обязательно для заполнения'),
 	passwordConfirmation: yup
 		.string()
-		.oneOf([yup.ref('passwordHash')], 'Пароль должен совпадать')
+		.oneOf([yup.ref('password')], 'Пароль должен совпадать')
 		.required(),
 	isChecked: yup
 		.boolean()
