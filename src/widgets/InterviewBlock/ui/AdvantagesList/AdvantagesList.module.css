@@ -1,5 +1,5 @@
 .advantages {
-    margin-top: 100px;
+    margin-top: 40px;
 }
 
 .advantages-list {
@@ -7,31 +7,29 @@
     grid-template-columns: repeat(3, 1fr);
     align-items: start;
     gap: 20px;
-    height: 263px;
     list-style: none;
 }
 
 .advantages-list li {
     position: relative;
     padding: 24px;
-    height: 201px;
+    height: 212px;
     border-radius: 12px;
     background-color: var(--color-white-text);
     line-height: 21.86px;
 }
 
 .advantages-list li:nth-child(2) {
-    align-self: end;
-    height: 223px;
+    margin-top: 40px;
     background-color: var(--constant-active);
 }
 
 .advantages-list li:nth-child(2)::before {
     position: absolute;
-    bottom: 223px;
+    bottom: 212px;
     left: 167px;
     width: 69px;
-    height: 265px;
+    height: 205px;
     border-top: 2px solid #D2B6FF;
     border-left: 2px solid #D2B6FF;
     border-top-left-radius: 20px;
@@ -41,7 +39,7 @@
 .advantages-list li:nth-child(3)::before {
     position: absolute;
     right: 51px;
-    bottom: 201px;
+    bottom: 212px;
     width: 19px;
     height: 146px;
     border-top: 2px solid #D2B6FF;
@@ -50,13 +48,13 @@
     content: "";
 }
 
-.advantages-list img {
-    margin-bottom: 40px;
+.advantages-list svg {
     width: 43px;
     height: 45px;
 }
 
 .advantages-list h3 {
+    margin-top: 40px;
     margin-bottom: 8px;
     font-weight: var(--font-weight-500);
     font-size: var(--font-size-large);
