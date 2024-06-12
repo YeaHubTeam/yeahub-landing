@@ -1,13 +1,15 @@
 import ScreenImg from '@/shared/assets/images/screen.png';
-import { mockTraining } from '@/shared/const/mockTraining';
 
+import { mockTraining } from './mockTraining';
 import cls from './QuestionList.module.css';
+
+const mockQuestionList = mockTraining.slice(0, 4);
 
 export const QuestionList = () => {
 	return (
 		<ul className={cls['question-list']}>
-			{mockTraining.map((training, index) => (
-				<li className={cls['question-item']} key={index}>
+			{mockQuestionList.map((training) => (
+				<li className={cls['question-item']} key={training.id}>
 					<img src={ScreenImg} alt="question" />
 					<p>{training.title}</p>
 					<div>
