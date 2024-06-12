@@ -1,0 +1,34 @@
+.offer-list {
+    display: grid;
+    grid-template-columns: 321px 242px;
+    margin-bottom: 40px;
+}
+
+.offer-list li {
+    position: relative;
+    padding-top: 61px;
+}
+
+.offer-list li > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.offer-list li > div svg {
+    width: 43px;
+    height: 45px;
+}
+
+.offer-list li:first-child {
+    padding-right: 20px;
+    border-right: 1px solid #BABABA;
+}
+
+.offer-list li:last-child {
+    padding-left: 20px;
+}
+
+.offer-list li:last-child > div {
+    left: 20px;
+} 
