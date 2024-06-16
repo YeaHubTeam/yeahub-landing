@@ -1,0 +1,95 @@
+.question-interface {
+    padding: 24px 45.04px 0 24px;
+    max-width: 701px;
+    max-height: 489px;
+    border-radius: 12px;
+    background-color: var(--constant-white);
+}
+
+.caption {
+    display: flex;
+    gap: 36px;
+    line-height: 21.86px;
+    font-weight: var(--font-weight-400);
+    font-size: var(--font-size-medium);
+}
+
+.caption svg {
+    min-width: 43px;
+    height: 45px;
+}
+
+.caption p {
+    padding-right: 160px;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20.81px;
+    margin-top: 40px;
+    padding: calc(16px + 20.81px);
+    padding-top: 16px;
+    padding-bottom: 0;
+    box-shadow: var(--main-shadow);
+    border-bottom: none;
+    border-radius: 12px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.container h3 {
+    position: relative;
+    line-height: 23.69px;
+    font-weight: var(--font-weight-500);
+    font-size: var(--font-size-medium);
+    text-wrap: nowrap;
+}
+
+.container h3::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -13.88px;
+    width: 6.94px;
+    height: 6.94px;
+    border-radius: 50%;
+    background-color: var(--color-purple-dot);
+    transform: translateY(-50%);
+}
+
+.container > div {
+    display: flex;
+    gap: 30.68px;
+}
+
+.container > div p {
+    padding: 5.2px 8.67px;
+    border-radius: 6.94px;
+    background-color: var(--color-background-gray-2);
+    line-height: 16.58px;
+    font-weight: var(--font-weight-600);
+    font-size: var(--font-size-medium-small);
+}
+
+.container p span {
+    margin-left: 10.4px;
+    padding: 0 4.34px;
+    border-radius: 3.47px;
+    background-color: var(--color-purple-700);
+    color: var(--color-white-text);
+}
+
+.img-container {
+    width: 478px;
+    height: 157px;
+    border-radius: 12px;
+    background: url("/src/shared/assets/images/question-interface-bg.png");
+}
+
+.answer {
+    line-height: 22.2px;
+    font-weight: var(--font-weight-500);
+    font-size: var(--font-size-small);
+}

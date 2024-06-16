@@ -1,0 +1,52 @@
+.buttons {
+    position: absolute;
+    top: 25.4px;
+    right: 31.67px;
+    display: flex;
+    flex-direction: column;
+}
+
+.collapse,
+.close {
+    position: relative;
+}
+
+.collapse span::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1.44px;
+    height: 10.4px;
+    border-radius: 1.44px;
+    background-color: var(--color-purple-700);
+    content: '';
+}
+
+.collapse .left::before {
+    transform: rotate(45deg);
+}
+
+.collapse .right::before {
+    left: 6.5px;
+    transform: rotate(-45deg);
+}
+
+.close span::before {
+    position: absolute;
+    top: 0;
+    left: 10.4px;
+    width: 2.6px;
+    height: 2.6px;
+    border-radius: 50%;
+    background-color: var(--color-gray-dot);
+    content: '';
+    opacity: 0.8;
+}
+
+.close span.middle::before {
+    top: 5.2px;
+}
+
+.close span.bottom::before {
+    top: 10.4px;
+}

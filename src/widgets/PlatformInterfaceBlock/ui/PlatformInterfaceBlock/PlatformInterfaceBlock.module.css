@@ -1,5 +1,6 @@
 .platform-interface-block {
     margin: 0 -92px;
+    margin-bottom: 130px;
     padding: 40px 92px;
     border-radius: 24px;
     background-color: var(--constant-active);
@@ -18,61 +19,20 @@
 }
 
 .caption-block h2 {
-    min-width: 50%;
+    min-width: 40.71%;
     line-height: 50.8px;
+    text-transform: uppercase;
     font-size: var(--font-size-small-title);
 }
 
 .caption-block p {
     align-self: flex-end;
-    padding-left: 100px;
+    padding-left: 325px;
     line-height: 25.6px;
     font-size: var(--font-size-medium);
 }
 
-.platform-interface-block > .container {
+.container {
     display: flex;
     gap: 20px;
-}
-
-.left-block {
-    padding: 24px 45.04px 0 24px;
-    max-width: 701px;
-    border-radius: 12px;
-    background-color: var(--constant-white);
-}
-
-.question-interface {
-    margin-top: 40px;
-    padding: 16px;
-    box-shadow: var(--main-shadow);
-    border-bottom: none;
-    border-radius: 12px;
-}
-
-.content-container {
-    padding: 20px;
-    padding-bottom: 0;
-    border-radius: 12px;
-    background-color: var(--first-step-bg-color);
-}
-
-.content {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    padding: 24px;
-    box-shadow: var(--main-shadow);
-    border-radius: 12px;
-    background-color: var(--constant-white);
-}
-
-.categories {
-    display: flex;
-    flex-direction: column;
-}
-
-.categories-list {
-    display: flex;
-    flex-flow: row wrap;
 }
