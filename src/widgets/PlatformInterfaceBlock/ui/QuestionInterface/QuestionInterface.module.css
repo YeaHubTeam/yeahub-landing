@@ -85,7 +85,7 @@
     width: 478px;
     height: 157px;
     border-radius: 12px;
-    background: url("/src/shared/assets/images/question-interface-bg.png");
+    background: url('/src/shared/assets/images/question-interface-bg.png');
 }
 
 .answer {
