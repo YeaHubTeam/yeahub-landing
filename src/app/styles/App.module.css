@@ -1,20 +1,24 @@
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
 :root {
     --color-background-gray: #f4f4f4;
     --color-background-gray-2: #f8f8f8;
     --color-black: #303030;
-    --color-red-600: #F3164E;
-    --color-gray-text: #8C8C8C;
+    --color-red-600: #f3164e;
+    --color-gray-text: #8c8c8c;
     --color-gray-border: #d1d1d1;
     --color-gray-icon: #757575;
+    --color-gray-input: #a3a3a3;
+    --color-gray-dot: #5e5e5e;
+    --color-border: #bababa;
     --color-bottem-border: #e8e8e8;
+    --color-filter-border: rgb(28 28 28 / 20%);
     --color-white-text: #fff;
     --color-black-text: #141414;
-    --color-purple-700: #6A0BFF;
+    --color-purple-700: #6a0bff;
     --color-purple-500: #a66dff;
     --color-purple-800: #5509cc;
-    --color-purple-dot: #53F;
+    --color-purple-dot: #53f;
     --color-button-bg: rgb(195 157 255 / 100%);
     --color-label-bg: rgb(209 209 209 / 27%);
     --color-button-text: rgb(85 9 204);
@@ -44,14 +48,14 @@
     --font-size-semi-large: 18px;
     --font-size-large: 20px;
     --font-size-24: 24px;
-    --font-size-btn-medium:28px;
+    --font-size-btn-medium: 28px;
     --font-size-large-30: 30px;
     --font-size-small-title: 40px;
     --font-size-title: 60px;
-    --font-family-primary: "Manrope", sans-serif;
+    --font-family-primary: 'Manrope', sans-serif;
 }
 
-[scheme="dark"] {
+[scheme='dark'] {
     --background-zero: var(--color-black);
     --background-primary: var(--constant-black);
     --foreground-primary: var(--constant-white);
@@ -71,6 +75,7 @@ body {
     outline: 4px solid var(--badge-color);
 }
 
-button, a {
+button,
+a {
     cursor: pointer;
 }

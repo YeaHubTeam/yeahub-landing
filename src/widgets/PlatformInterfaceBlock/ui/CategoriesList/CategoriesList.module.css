@@ -1,0 +1,38 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 5.69px;
+}
+
+.container p {
+    line-height: 13.6px;
+    font-weight: var(--font-weight-400);
+    font-size: var(--font-size-semi-small);
+}
+
+.categories-list {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 5.69px;
+}
+
+.categories-list li {
+    display: flex;
+    gap: 5.69px;
+    padding: 7.11px 8.53px;
+    border: 0.71px solid var(--color-border);
+    border-radius: 8.53px;
+    line-height: 15.54px;
+    font-weight: var(--font-weight-500);
+    font-size: var(--font-size-medium-small);
+}
+
+.categories-list li > div {
+    width: 14.22px;
+    height: 14.22px;
+}
+
+.more {
+    color: var(--color-purple-800);
+    text-decoration: underline;
+}

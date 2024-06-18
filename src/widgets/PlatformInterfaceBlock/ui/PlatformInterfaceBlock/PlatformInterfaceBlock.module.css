@@ -1,0 +1,38 @@
+.platform-interface-block {
+    margin: 0 -92px;
+    margin-bottom: 130px;
+    padding: 40px 92px;
+    border-radius: 24px;
+    background-color: var(--constant-active);
+}
+
+.platform-interface-block ul {
+    list-style: none;
+}
+
+.caption-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    font-weight: var(--font-weight-500);
+}
+
+.caption-block h2 {
+    min-width: 40.71%;
+    line-height: 50.8px;
+    text-transform: uppercase;
+    font-size: var(--font-size-small-title);
+}
+
+.caption-block p {
+    align-self: flex-end;
+    padding-left: 325px;
+    line-height: 25.6px;
+    font-size: var(--font-size-medium);
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+}
