@@ -1,6 +1,7 @@
 import { Footer } from '@/widgets/Footer';
 import { Header } from '@/widgets/Header';
 import { InterviewBlock } from '@/widgets/InterviewBlock';
+import { InterviewModeBlock } from '@/widgets/InterviewModeBlock';
 import { PlatformInterfaceBlock } from '@/widgets/PlatformInterfaceBlock';
 import { TrainingBlock } from '@/widgets/TrainingBlock';
 
@@ -13,6 +14,7 @@ export const InterviewPage = () => {
 			<InterviewBlock />
 			<TrainingBlock />
 			<PlatformInterfaceBlock />
+			<InterviewModeBlock />
 			<Footer />
 		</div>
 	);
