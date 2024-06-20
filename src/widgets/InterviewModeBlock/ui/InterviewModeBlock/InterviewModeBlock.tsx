@@ -1,3 +1,6 @@
+import { Advantages } from '../Advantages/Advantages';
+import { Control } from '../Control/Control';
+
 import cls from './InterviewModeBlock.module.css';
 
 export const InterviewModeBlock = () => {
@@ -8,7 +11,6 @@ export const InterviewModeBlock = () => {
 					<div></div>
 					<span>Вопрос викторины 10 из 45</span>
 				</div>
-
 				<div className={cls.question}>
 					<h3>Что такое Virtual DOM, и как он работает?</h3>
 
@@ -17,17 +19,10 @@ export const InterviewModeBlock = () => {
 					<p>Посмотреть ответ</p>
 				</div>
 
-				<div className={cls.control}></div>
+				<Control />
 			</div>
 
-			<div className={cls.advantages}>
-				<ul className={cls['advantages-list']}>
-					<li></li>
-					<li></li>
-				</ul>
-
-				<p>Это идеальный способ подготовиться к реальным собеседованиям.</p>
-			</div>
+			<Advantages />
 		</section>
 	);
 };

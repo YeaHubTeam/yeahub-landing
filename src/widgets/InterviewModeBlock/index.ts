@@ -1,1 +1,1 @@
-export { InterviewModeBlock } from './ui/InterviewModeBlock';
+export { InterviewModeBlock } from './ui/InterviewModeBlock/InterviewModeBlock';
