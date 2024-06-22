@@ -11,6 +11,7 @@
     --color-gray-input: #a3a3a3;
     --color-gray-dot: #5e5e5e;
     --color-border: #bababa;
+    --color-progress-bar: #e1ceff;
     --color-bottem-border: #e8e8e8;
     --color-filter-border: rgb(28 28 28 / 20%);
     --color-white-text: #fff;
@@ -19,7 +20,7 @@
     --color-purple-500: #a66dff;
     --color-purple-800: #5509cc;
     --color-purple-dot: #53f;
-    --color-button-bg: rgb(195 157 255 / 100%);
+    --color-button-bg: rgb(195 157 255);
     --color-label-bg: rgb(209 209 209 / 27%);
     --color-button-text: rgb(85 9 204);
     --constant-active: rgb(240 231 255 / 100%);
@@ -28,6 +29,7 @@
     --constant-white: #fff;
     --first-step-bg-color: #fffcf2;
     --second-step-bg-color: #f0e7ff;
+    --color-yellow-700: #ffda85;
     --background-zero: var(--color-background-gray);
     --background-primary: var(--constant-white);
     --background-active: var(--constant-active);

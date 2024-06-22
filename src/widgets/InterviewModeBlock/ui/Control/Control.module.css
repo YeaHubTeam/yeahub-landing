@@ -1,0 +1,56 @@
+.control {
+    display: flex;
+    align-items: center;
+    padding-top: 16px;
+    border-top: 0.5px solid var(--color-gray-text);
+    line-height: 21.86px;
+    font-weight: var(--font-weight-500);
+    font-size: var(--font-size-medium);
+    text-wrap: nowrap;
+}
+
+.control > div {
+    width: 28px;
+    height: 28px;
+}
+
+.control > div svg {
+    width: 28px;
+    height: 28px;
+}
+
+.control-list {
+    display: flex;
+    gap: 8px;
+    padding: 0 112px;
+}
+
+.control-list li {
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+}
+
+.control-list span {
+    margin-left: 8px;
+}
+
+.control-list li > div {
+    width: 24px;
+    height: 24px;
+}
+
+.control-list li > div svg {
+    width: 24px;
+    height: 24px;
+}
+
+.control-list li:last-child {
+    border-radius: 12px;
+    background-color: var(--color-background-gray-2);
+    color: var(--color-purple-700);
+}
+
+.control > div:nth-child(2) {
+    order: 3;
+}
