@@ -1,0 +1,93 @@
+.statistics {
+    display: flex;
+    flex-direction: column;
+    padding: 24px 24px 21px;
+    border-radius: 16px 16px 0 0;
+    background-color: var(--constant-white);
+}
+
+.statistics h3 {
+    margin-bottom: 33px;
+    line-height: 27px;
+    font-weight: var(--font-weight-500);
+    font-size: var(--font-size-large);
+}
+
+.statistics-pie {
+    position: relative;
+    margin: 0 35.5px;
+    width: 241px;
+    height: 241px;
+    border: 24px solid var(--constant-active);
+    border-radius: 50%;
+}
+
+.pie {
+    --p: 75;
+    --b: 24px;
+    --c: var(--color-purple-900);
+    --w: 241px;
+
+    position: absolute;
+    top: -24px;
+    left: -24px;
+    display: inline-grid;
+    aspect-ratio: 1;
+    width: 241px;
+    height: 241px;
+    transform: scaleX(-1);
+    place-content: center;
+}
+
+.pie::before,
+.pie::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+}
+
+.pie::before {
+    inset: 0;
+    background:
+        radial-gradient(farthest-side, var(--c) 98%, #0000) top/var(--b) var(--b) no-repeat,
+        conic-gradient(var(--c) calc(var(--p) * 1%), #0000 0);
+    mask: radial-gradient(farthest-side, #0000 calc(99% - var(--b)), #000 calc(100% - var(--b)));
+}
+
+.pie::after {
+    inset: calc(50% - var(--b) / 2);
+    background: var(--c);
+    transform: rotate(calc(var(--p) * 3.6deg)) translateY(calc(50% - var(--w) / 2));
+}
+
+.pie .label {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    line-height: 25px;
+    font-weight: var(--font-weight-600);
+    font-size: var(--font-size-semi-large);
+    transform: scaleX(-1);
+}
+
+.statistics-list {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.statistics-list li {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 8px 16px;
+    box-shadow: var(--main-shadow);
+    color: var(--color-gray-text);
+    line-height: 15px;
+    font-weight: var(--font-weight-500);
+    font-size: var(--font-size-semi-small);
+}
+
+.statistics-list li span {
+    color: var(--color-black);
+}
