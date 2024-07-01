@@ -1,4 +1,4 @@
-import { classNames } from '@/shared/libs/utils/classNames/classNames';
+import Progress from '@/shared/assets/icons/progress.svg';
 
 import cls from './Statistics.module.css';
 
@@ -7,11 +7,13 @@ export const Statistics = () => {
 		<div className={cls.statistics}>
 			<h3>Статистика собеседований</h3>
 
-			<div className={classNames(cls['statistics-pie'], {}, [cls['progress-75'], cls['style-2']])}>
+			<div className={cls['statistics-pie']}>
 				<div className={cls.pie}>
 					<p className={cls.label}>
-						75%<span>пройдено</span>
+						60%<span>пройдено</span>
 					</p>
+
+					<Progress className={cls['progress-icon']} />
 				</div>
 			</div>
 
