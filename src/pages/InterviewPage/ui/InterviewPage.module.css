@@ -3,3 +3,15 @@
     padding: 0 var(--container-padding);
     max-width: var(--container-width);
 }
+
+@media screen and (width <= 1439px) {
+    .container {
+        max-width: var(--container-width-tablet);
+    }
+}
+
+@media screen and (width <= 767px) {
+    .container {
+        max-width: var(--container-width-mobile);
+    }
+}
