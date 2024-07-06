@@ -8,11 +8,11 @@ import { AdvantagesList } from '../AdvantagesList/AdvantagesList';
 import { Progress } from '../Progress/Progress';
 import { Skills } from '../Skills/Skills';
 
-
 import cls from './InterviewBlock.module.css';
 
 export const InterviewBlock = () => {
-	const { isMobile } = useResize();
+	const size = useResize();
+	const isMobile = size < 768;
 
 	return (
 		<section className={cls['interview-block']}>

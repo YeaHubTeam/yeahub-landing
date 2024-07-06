@@ -38,15 +38,17 @@
     --background-active: var(--constant-active);
     --foreground-primary: var(--color-black-text);
     --badge-primary: var(--badge-color);
-    --container-width: 84.444%;
-    --container-width-tablet: 91.93%;
-    --container-width-mobile: 95.56%;
+    --container-width: 1216px;
+    --container-width-tablet: 708px;
+    --container-width-mobile: 100%;
     --grid-template-columns: 332px 244px 244px;
     --container-padding: 0;
     --font-weight-400: 400;
     --font-weight-500: 500;
     --font-weight-600: 600;
     --font-weight-800: 800;
+    --font-size-6: 6px;
+    --font-size-7: 7px;
     --font-size-very-small: 8px;
     --font-size-semi-small: 10px;
     --font-size-medium-small: 12px;
@@ -57,6 +59,7 @@
     --font-size-24: 24px;
     --font-size-btn-medium: 28px;
     --font-size-large-30: 30px;
+    --font-size-large-34: 34px;
     --font-size-small-title: 40px;
     --font-size-title: 60px;
     --font-family-primary: 'Manrope', sans-serif;

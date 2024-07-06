@@ -51,6 +51,7 @@
 @media screen and (width <= 767px) {
     .advantages {
         margin-top: 24px;
+        padding: 0 8px;
     }
 
     .advantages-list {
