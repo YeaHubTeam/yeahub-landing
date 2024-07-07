@@ -1,3 +1,4 @@
+import { useResize } from '@/shared/hooks/useResize/useResize';
 import { PencilIcon } from '@/shared/ui/PencilIcon';
 
 import { Buttons } from '../Buttons/Buttons';
@@ -5,6 +6,9 @@ import { Buttons } from '../Buttons/Buttons';
 import cls from './QuestionInterface.module.css';
 
 export const QuestionInterface = () => {
+	const size = useResize();
+	const isTablet = size < 1440;
+
 	return (
 		<div className={cls['question-interface']}>
 			<div className={cls.caption}>
@@ -32,11 +36,20 @@ export const QuestionInterface = () => {
 
 				<div className={cls['img-container']}></div>
 
-				<p className={cls.answer}>
-					Virtual DOM (виртуальный DOM) — это программная концепция, используемая в разработке
-					веб-приложений для повышения эффективности обновлений интерфейса. Это представление
-					реального DOM (структуры документа,
-				</p>
+				{isTablet ? (
+					<p className={cls.answer}>
+						Virtual DOM (виртуальный DOM) — это программная концепция, используемая в разработке
+						веб-приложений для повышения эффективности обновлений интерфейса. Это представление
+						реального DOM (структуры документа, отображаемого в браузере) в памяти, которое
+						позволяет оптимизировать изменени...
+					</p>
+				) : (
+					<p className={cls.answer}>
+						Virtual DOM (виртуальный DOM) — это программная концепция, используемая в разработке
+						веб-приложений для повышения эффективности обновлений интерфейса. Это представление
+						реального DOM (структуры документа,
+					</p>
+				)}
 			</div>
 		</div>
 	);

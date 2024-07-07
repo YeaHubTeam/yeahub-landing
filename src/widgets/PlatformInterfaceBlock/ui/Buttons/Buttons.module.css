@@ -7,7 +7,7 @@
 }
 
 .collapse,
-.close {
+.info {
     position: relative;
 }
 
@@ -31,7 +31,7 @@
     transform: rotate(-45deg);
 }
 
-.close span::before {
+.info span::before {
     position: absolute;
     top: 0;
     left: 10.4px;
@@ -43,10 +43,72 @@
     opacity: 0.8;
 }
 
-.close span.middle::before {
+.info span.middle::before {
     top: 5.2px;
 }
 
-.close span.bottom::before {
+.info span.bottom::before {
     top: 10.4px;
+}
+
+@media screen and (width <= 1439px) {
+    .buttons {
+        top: 22.28px;
+        right: 19.43px;
+    }
+
+    .collapse span::before {
+        width: 1.32px;
+        height: 9.53px;
+        border-radius: 1.32px;
+    }
+
+    .collapse .right::before {
+        left: 6px;
+    }
+
+    .info span::before {
+        right: 18.56px;
+        width: 2.38px;
+        height: 2.38px;
+    }
+
+    .info span.middle::before {
+        top: 4.76px;
+    }
+
+    .info span.bottom::before {
+        top: 9.52px;
+    }
+}
+
+@media screen and (width <= 767px) {
+    .buttons {
+        top: 11.73px;
+        right: 9.38px;
+    }
+
+    .collapse span::before {
+        width: 0.67px;
+        height: 4.84px;
+        border-radius: 0.67px;
+    }
+
+    .collapse .right::before {
+        left: 3.19px;
+    }
+
+    .info span::before {
+        left: 4.84px;
+        width: 1.21px;
+        height: 1.21px;
+    }
+
+    .info span.middle::before {
+        top: 2.42px;
+    }
+
+    .info span.bottom::before {
+        top: 4.84px;
+    }
 }
