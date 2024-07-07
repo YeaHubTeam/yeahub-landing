@@ -1,3 +1,4 @@
+import { useResize } from '@/shared/hooks/useResize/useResize';
 import { Button } from '@/shared/ui/Button';
 
 import { OfferList } from '../OfferList/OfferList';
@@ -6,6 +7,9 @@ import { QuestionList } from '../QuestionList/QuestionList';
 import cls from './TrainingBlock.module.css';
 
 export const TrainingBlock = () => {
+	const size = useResize();
+	const isTablet = size < 1440;
+
 	return (
 		<section className={cls['training-block']}>
 			<div className={cls['left-block']}>
@@ -16,8 +20,14 @@ export const TrainingBlock = () => {
 				</div>
 			</div>
 			<div className={cls['right-block']}>
-				<h2 className={cls.title}>Удобный тренажёр</h2>
-				<p>Практикуйте изученные темы в нашем тренажёре.</p>
+				<div className={cls.title}>
+					<h2>Удобный тренажёр</h2>
+					{isTablet ? (
+						<p>В YeaHub каждый найдёт новые возможности для обучения.</p>
+					) : (
+						<p>Практикуйте изученные темы в нашем тренажёре.</p>
+					)}
+				</div>
 
 				<OfferList />
 

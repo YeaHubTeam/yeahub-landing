@@ -1,7 +1,7 @@
 .container {
     position: absolute;
-    top:22px;
-    left: -82px;
+    top: 22px;
+    left: -14%;
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -9,7 +9,7 @@
     width: 152px;
     height: 144px;
     border-radius: 12px;
-    background-color: var( --constant-white);
+    background-color: var(--constant-white);
     transform: rotate(-5deg);
 }
 
@@ -30,4 +30,32 @@
 .icon-container > svg {
     width: 36px;
     height: 36px;
+}
+
+@media screen and (width <= 1439px) {
+    .container {
+        top: 22.2px;
+        left: 0;
+    }
+}
+
+@media screen and (width <= 767px) {
+    .container {
+        top: 17px;
+        padding: 6px;
+        width: 84px;
+        height: 84px;
+        border-radius: 8px;
+    }
+
+    .icon-container {
+        padding: 6.5px;
+        width: 32px;
+        height: 32px;
+    }
+
+    .icon-container > svg {
+        width: 20px;
+        height: 20px;
+    }
 }
