@@ -52,16 +52,13 @@
 }
 
 .categories-input input {
-    padding: 8.53px 17.07px;
-    padding-left: 36.98px;
+    padding: 8.53px 17.07px 8.53px 36.98px;
     width: 100%;
     border: 0.71px solid var(--color-bottem-border);
     border-radius: 48.36px;
     background-color: transparent;
-}
-
-.categories-input input::placeholder {
     color: var(--color-gray-input);
+    line-height: 16px;
     font-weight: var(--font-weight-400);
     font-size: var(--font-size-medium-small);
 }
@@ -71,7 +68,7 @@
     gap: 36px;
     padding-right: 79px;
     padding-bottom: 24px;
-    line-height: 21.86px;
+    line-height: 22px;
     font-weight: var(--font-weight-400);
     font-size: var(--font-size-medium);
 }
@@ -79,4 +76,100 @@
 .caption-block svg {
     width: 43px;
     height: 45px;
+}
+
+@media screen and (width <= 1439px) {
+    .categories-block {
+        align-items: center;
+        gap: 24px;
+    }
+
+    .categories {
+        padding: 0;
+        max-width: 260px;
+    }
+
+    .content-container {
+        padding: 24px;
+    }
+
+    .content {
+        display: flex;
+        justify-content: space-between;
+        gap: 0;
+        margin-bottom: 24px;
+        padding: 20px 19.09px;
+        overflow: visible;
+        border-radius: 17.07px;
+    }
+
+    .categories-input {
+        width: 260px;
+    }
+
+    .categories-input input {
+        padding: 9px 17.07px 9px 36.98px;
+        border: 0.47px solid var(--color-bottem-border);
+        border-radius: 32.02px;
+    }
+
+    .caption-block {
+        gap: 24px;
+        padding-right: 208px;
+        padding-bottom: 0;
+    }
+
+    .caption-block svg {
+        width: 43px;
+        height: 45px;
+    }
+}
+
+@media screen and (width <= 767px) {
+    .content-container {
+        padding: 16px;
+    }
+
+    .content {
+        margin-bottom: 16px;
+        padding: 10.83px 12.95px;
+        border-radius: 10.83px;
+    }
+
+    .categories {
+        gap: 11.26px;
+        max-width: 121.84px;
+    }
+
+    .categories-input {
+        width: 121.84px;
+    }
+
+    .categories-input > div {
+        top: 0;
+        left: 11.3px;
+        width: 9.42px;
+        height: 10px;
+        transform: translateY(0);
+    }
+
+    .categories-input input {
+        padding: 5.79px 0 5.79px 24.49px;
+        border: 0.47px solid var(--color-bottem-border);
+        border-radius: 32.02px;
+        line-height: 10px;
+        font-size: var(--font-size-very-small);
+    }
+
+    .caption-block {
+        gap: 16px;
+        padding-right: 0;
+        line-height: 19px;
+        font-size: var(--font-size-small);
+    }
+
+    .caption-block svg {
+        width: 45px;
+        height: 40px;
+    }
 }

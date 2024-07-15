@@ -13,8 +13,7 @@
     display: flex;
     flex-direction: column;
     gap: 5.69px;
-    color: var();
-    line-height: 13.6px;
+    line-height: 14px;
     font-weight: var(--font-weight-400);
     font-size: var(--font-size-semi-small);
 }
@@ -23,8 +22,9 @@
     display: flex;
     flex-wrap: wrap;
     gap: 5.69px;
-    line-height: 15.54px;
-    font-size: var(--font-size-medium-small);
+    width: fit-content;
+    line-height: 16px;
+    font-size: var(--font-size-11);
 }
 
 .sub-list li {
@@ -38,14 +38,62 @@ li.active {
 }
 
 .filters-list li:first-child .sub-list {
-    width: 165px;
+    padding-right: 45px;
 }
 
 .filters-list li:last-child .sub-list {
-    width: 200px;
+    width: 178.82px;
     text-wrap: nowrap;
 }
 
 .filters-list li:last-child .sub-list li {
     flex-basis: 0;
+}
+
+@media screen and (width <= 1439px) {
+    .filters {
+        padding-top: 0;
+        transform: translateY(0);
+    }
+
+    .filters-list li:first-child .sub-list {
+        padding-right: 0;
+        max-width: 120px;
+    }
+}
+
+@media screen and (width <= 767px) {
+    .filters-list {
+        gap: 11.26px;
+    }
+
+    .filters-list > li {
+        gap: 3.77px;
+        line-height: 9px;
+        font-size: var(--font-size-7);
+    }
+
+    .sub-list {
+        gap: 3.77px;
+        line-height: 10px;
+        font-size: var(--font-size-very-small);
+    }
+
+    .sub-list li {
+        padding: 4.21px 5.15px;
+        border: 0.47px solid var(--color-filter-border);
+        border-radius: 5.65px;
+    }
+
+    .filters-list li:first-child .sub-list {
+        max-width: 81px;
+    }
+
+    .filters-list li:last-child .sub-list {
+        width: 122px;
+    }
+
+    li.active {
+        border-color: var(--color-purple-700);
+    }
 }

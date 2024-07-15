@@ -7,7 +7,7 @@ export const Buttons = () => {
 				<span className={cls.left}></span>
 				<span className={cls.right}></span>
 			</div>
-			<div className={cls.close}>
+			<div className={cls.info}>
 				<span className={cls.top}></span>
 				<span className={cls.middle}></span>
 				<span className={cls.bottom}></span>
