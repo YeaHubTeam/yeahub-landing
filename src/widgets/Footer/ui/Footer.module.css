@@ -1,0 +1,95 @@
+.footer * {
+    margin: 0;
+    padding: 0;
+}
+
+.footer {
+    padding: 64px 112px 18px;
+    border-radius: 20px 20px 0 0;
+    background: #18003E;
+    color: var(--color-white-text);
+}
+
+.container {
+    margin: 0 auto;  
+    width: 100%;
+    max-width: 1216px;
+}
+
+.container-logo {
+    margin-bottom: 16px;
+    width: 100%;
+    max-width: 130px;
+    height: 32px;
+}
+
+.container-logo a img{
+    padding-right: 5px;
+}
+
+.subtitle {
+    margin-bottom: 20px;
+    font-weight: var(--font-weight-400);
+    font-size: var(--font-size-medium);
+}
+
+.container-social {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 64px;
+    width: 100%;
+    max-width: 174px;
+    height: 28px;
+}
+
+.container-social svg  {
+    fill: white;
+}
+
+.about {
+    margin-bottom: 35px;
+    color: var(--color-gray-text);
+    line-height: 15px;
+    font-weight: var(--font-weight-400);
+    font-size: var(--font-size-medium-small);
+}
+
+.footer hr {
+    margin-bottom: 20px;
+}
+
+.container-copyright {
+    display: flex;
+    justify-content: space-between;
+}
+
+.copyright-icons {
+    display: flex;
+    gap: 4px;
+    max-width: 58px;
+    height: 28px;
+}
+
+.copyright-icons svg {
+    fill: white;
+}
+
+.figma :nth-child(1) {
+    fill:#00BCFF;
+}
+
+.figma :nth-child(2) {
+    fill:#00CF7F;
+}
+
+.figma :nth-child(3) {
+    fill:#FF7361;
+}
+
+.figma :nth-child(4) {
+    fill:#FF4D12;
+}
+
+.figma :nth-child(5) {
+    fill:#B659FF;
+}

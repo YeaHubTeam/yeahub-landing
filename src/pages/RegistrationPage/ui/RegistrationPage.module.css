@@ -1,0 +1,19 @@
+.wrapper {
+    display: flex;
+    flex-basis: 58%;
+    flex-direction: column;
+    align-items: center;
+    padding: 70px 5px 0;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.title {
+    margin-top: 0;
+    margin-bottom: 31px;
+    max-width: 408px;
+    text-align: center;
+    font-weight: var(--font-weight-500);
+    font-size: var(--font-size-small-title);
+}

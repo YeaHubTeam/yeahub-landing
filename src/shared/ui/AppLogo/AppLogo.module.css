@@ -1,0 +1,25 @@
+.white {
+    fill: #fff
+}
+
+.black {
+    fill: #141414
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: padding-left .5s ease-in-out;
+}
+
+.logo-image {
+    padding-right: 5px;   
+}
+
+.name {
+    width: 100px;
+    height: 32px;
+    color: var(--text-color-primary);
+    transition: opacity .7s ease-in-out;
+} 

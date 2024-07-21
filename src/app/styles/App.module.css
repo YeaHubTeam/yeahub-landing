@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+    --color-background-gray: #f4f4f4;
+    --color-background-gray-2: #f8f8f8;
+    --color-black: #303030;
+    --color-red-600: #f3164e;
+    --color-gray-text: #8c8c8c;
+    --color-gray-border: #d1d1d1;
+    --color-gray-icon: #757575;
+    --color-gray-input: #a3a3a3;
+    --color-gray-dot: #5e5e5e;
+    --color-border: #bababa;
+    --color-progress-bar: #e1ceff;
+    --color-bottem-border: #e8e8e8;
+    --color-filter-border: rgb(28 28 28 / 20%);
+    --color-white-text: #fff;
+    --color-black-text: #141414;
+    --color-purple-50: #fdf4ff;
+    --color-purple-300: #d2b6ff;
+    --color-purple-500: #a66dff;
+    --color-purple-700: #6a0bff;
+    --color-purple-800: #5509cc;
+    --color-purple-900: #400799;
+    --color-purple-dot: #53f;
+    --color-button-bg: rgb(195 157 255);
+    --color-label-bg: rgb(209 209 209 / 27%);
+    --color-button-text: rgb(85 9 204);
+    --constant-active: #f0e7ff;
+    --badge-color: rgb(64 7 153 / 100%);
+    --main-shadow: 0px 4px 10px rgb(106 99 118 / 10%);
+    --constant-white: #fff;
+    --first-step-bg-color: #fffcf2;
+    --second-step-bg-color: #f0e7ff;
+    --color-yellow-700: #ffda85;
+    --background-zero: var(--color-background-gray);
+    --background-primary: var(--constant-white);
+    --background-active: var(--constant-active);
+    --foreground-primary: var(--color-black-text);
+    --badge-primary: var(--badge-color);
+    --container-width: 1216px;
+    --container-width-tablet: 708px;
+    --container-width-mobile: 100%;
+    --grid-template-columns: 332px 244px 244px;
+    --container-padding: 0;
+    --font-weight-400: 400;
+    --font-weight-500: 500;
+    --font-weight-600: 600;
+    --font-weight-800: 800;
+    --font-size-6: 6px;
+    --font-size-7: 7px;
+    --font-size-very-small: 8px;
+    --font-size-semi-small: 10px;
+    --font-size-11: 11px;
+    --font-size-medium-small: 12px;
+    --font-size-small: 14px;
+    --font-size-medium: 16px;
+    --font-size-semi-large: 18px;
+    --font-size-large: 20px;
+    --font-size-24: 24px;
+    --font-size-btn-medium: 28px;
+    --font-size-large-30: 30px;
+    --font-size-large-34: 34px;
+    --font-size-small-title: 40px;
+    --font-size-title: 60px;
+    --font-family-primary: 'Manrope', sans-serif;
+}
+
+[scheme='dark'] {
+    --background-zero: var(--color-black);
+    --background-primary: var(--constant-black);
+    --foreground-primary: var(--constant-white);
+}
+
+body {
+    overflow-x: hidden;
+    background-color: var(--background-zero);
+    color: var(--foreground-primary);
+    line-height: 22px;
+    font-weight: var(--font-weight-500);
+    font-size: var(--font-size-medium);
+    font-family: var(--font-family-primary);
+}
+
+*:focus-visible {
+    outline: 4px solid var(--badge-color);
+}
+
+button,
+a {
+    cursor: pointer;
+}

@@ -1,0 +1,73 @@
+.feedback-block {
+    margin-bottom: 130px;
+    padding: 0 8px;
+}
+
+.title {
+    margin-bottom: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: var(--font-weight-500);
+    font-size: var(--font-size-small-title);
+}
+
+.carousel {
+    display: grid;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    grid-auto-flow: column;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.carousel.no-transition {
+    scroll-behavior: auto;
+}
+
+.carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+
+.carousel .card {
+    scroll-snap-align: start;
+    cursor: pointer;
+}
+
+.carousel.dragging .card {
+    cursor: grab;
+    user-select: none;
+}
+
+
+.carousel > div:nth-child(even) {
+    background: #fff;
+}
+
+.carousel > div:nth-child(odd) {
+    background: rgb(240 231 255 / 100%);
+}
+
+.container-btn {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+@media screen and (width <=900px) {
+    .carousel {
+        grid-auto-columns: calc((100%/2) - 9px);
+    }
+}
+
+@media screen and (width <=600px) {
+    .carousel {
+        grid-auto-columns: 100%;
+    }
+}
+
+
+

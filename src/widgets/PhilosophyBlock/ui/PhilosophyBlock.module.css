@@ -1,0 +1,91 @@
+.philosophy-block {
+    margin-bottom: 130px;
+}
+
+.article {
+    margin-bottom: 40px;
+    text-align: center;
+    line-height: 50px;
+    font-weight: var(--font-weight-500);
+    font-size: var(--font-size-small-title);
+}
+
+.container {
+    display: flex; 
+    justify-content: space-between;
+    padding: 0 4px;
+    max-width: 1100px;
+}
+
+.left-block {
+    position: relative;
+    width: 100%;
+    max-width: 495px;
+}
+
+.wallpaper {
+    width: 100%;
+    max-width: 495px;
+}
+
+.user {
+    position: absolute;
+    bottom: 40px;
+    left: -73px;
+    width: 100%;
+    max-width: 204px;
+}
+
+.verification {
+    position: absolute;
+    top: 40px;
+    right: -73px;
+    display: flex;
+    flex-direction: column;
+    padding: 14px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 258px;
+    border-radius: 12px;
+    background: #fff;
+}
+
+.verification h3 {
+    line-height: 16px;
+    font-weight: var(--font-weight-600);
+    font-size: var(--font-size-small);
+    font-family: var(--font-family-primary);
+}
+
+.verification span {
+    margin-bottom: 12px;
+    line-height: 12px;
+    font-size: var(--font-size-very-small);
+    font-family: var(--font-weight-400);
+}
+
+.verification button {
+    width: 100%;
+    max-width: 136px;
+    max-height: 27px;
+    font-size: var(--font-size-semi-small);
+}
+
+.right-block {
+    margin-top: 90px;
+    padding: 8px;
+    max-width: 495px;
+}
+
+.right-block h3 {
+    margin: 16px 0;
+    line-height: 27px;
+    font-weight: var(--font-weight-500);
+    font-size: var(--font-size-large);
+    font-family: var(--font-family-primary);
+}
+
+.right-block span {
+    font-weight: var(--font-weight-400);
+    font-size: var(--font-size-medium);
+}
