@@ -6,7 +6,7 @@
 }
 
 .advantages p {
-    line-height: 27.32px;
+    line-height: 27px;
     font-weight: var(--font-weight-500);
     font-size: var(--font-size-large);
 }
@@ -15,7 +15,7 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
-    line-height: 21.86px;
+    line-height: 22px;
     font-weight: var(--font-weight-400);
     font-size: var(--font-size-medium);
 }
@@ -65,4 +65,85 @@
 
 .decoration > div:last-child {
     top: 260px;
+}
+
+@media screen and (width <= 1439px) {
+    .advantages p {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 48%;
+        font-size: var(--font-size-semi-large);
+    }
+
+    .advantages-list {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .advantages-list li {
+        position: relative;
+        gap: 24px;
+        padding: 16px;
+        min-width: 344px;
+        height: fit-content;
+    }
+
+    .advantages-list li::before {
+        position: absolute;
+        top: -80px;
+        left: calc(50% - 1px);
+        z-index: -1;
+        width: 2px;
+        height: 80px;
+        background-color: var(--color-border);
+        content: '';
+    }
+
+    .advantages-list li:last-child {
+        margin-top: 40px;
+    }
+
+    .decoration > div {
+        display: none;
+    }
+}
+
+@media screen and (width <= 767px) {
+    .advantages {
+        gap: 16px;
+    }
+
+    .advantages p {
+        position: relative;
+        width: 100%;
+        line-height: 22px;
+        font-size: var(--font-size-medium);
+    }
+
+    .advantages-list {
+        flex-direction: column;
+        gap: 16px;
+        line-height: 19px;
+        font-size: var(--font-size-small);
+    }
+
+    .advantages-list li {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding: 24px;
+        width: 100%;
+        min-width: 328px;
+        border-radius: 12px;
+    }
+
+    .advantages-list li::before {
+        content: none;
+    }
+
+    .advantages-list li:last-child {
+        margin-top: 0;
+    }
 }
