@@ -47,13 +47,23 @@ export default (env: EnvVariables) => {
   }
 
   const isDev = env.mode === 'development';
-  const port = Number(env.port) || Number(process.env.PORT) || 5173;
+  const port = env.port ?? process.env.PORT ?? 5173;
+
+  // Добавляем DefinePlugin для передачи переменных окружения в приложение
+  const envVars = {
+    __IS_DEV__: JSON.stringify(isDev),
+    'process.env.NODE_ENV': JSON.stringify(env.mode),
+    'process.env.PORT': JSON.stringify(process.env.PORT || port),
+    'process.env.API_URL': JSON.stringify(process.env.API_URL),
+    'process.env.LANDING_URL': JSON.stringify(process.env.LANDING_URL),
+  };
 
   const options: WebpackOptions = {
-    port: port,
+    port: +port,
     mode: env.mode,
     isDev,
     paths,
+    envs: envVars,
   };
 
   const config: Configuration = webpackConfig(options);
