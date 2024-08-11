@@ -13,7 +13,7 @@ export const CommunityBlock = () => {
 		<section className={cls.container}>
 			<div className={cls.description}>
 				<h2>
-					Сообщество <br /> IT специалистов!!!
+					Сообщество <br /> IT специалистов!!!!
 				</h2>
 				<p>
 					YeaHub — это не просто платформа, это место, где профессионалы <br /> IT-индустрии
