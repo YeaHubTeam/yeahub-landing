@@ -9,6 +9,7 @@ WORKDIR /app
 COPY package.json package-lock.json ./
 
 # Установить зависимости
+
 RUN npm ci
 
 # Скопировать все файлы проекта в рабочую директорию
